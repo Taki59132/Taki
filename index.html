@@ -259,6 +259,288 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/18/10242-Fourth-Point-第六周作業二/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/10/18/10242-Fourth-Point-第六周作業二/" itemprop="url">10242 Fourth Point !! 第六周作業二</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-18T23:51:21+08:00">
+                2017-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
+                    <span itemprop="name">Java作業</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">/*Author : 蔡宗翰</div><div class="line"> *學號：410577003</div><div class="line"> *Date : 2017/10/18</div><div class="line"> *第六周作業二  10242:Fourth Point !!</div><div class="line"> */</div><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class A410577003_6_2 &#123;</div><div class="line">	/*</div><div class="line">	 * 解法：輸入為兩個邊，故將前兩個x,y作為底邊，再看相同的座標是右邊還是左邊的來決定第四個座標的位置。</div><div class="line">	 */</div><div class="line">	public static void getForthPoint(double[] tmp, double[][] coori, int preIndex, int aftIndex) &#123;</div><div class="line">		double ansX = tmp[0] + (coori[preIndex][0] - coori[aftIndex][0]);</div><div class="line">		double ansY = tmp[1] + (coori[preIndex][1] - coori[aftIndex][1]);</div><div class="line">		System.out.printf(&quot;%.3f %.3f&quot;, ansX, ansY);</div><div class="line">		System.out.println();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		while (sc.hasNextDouble()) &#123;</div><div class="line">			double[][] coori = new double[3][2];</div><div class="line">			for (int j = 0; j &lt; 2; j++) &#123;// 輸入兩個座標當作底邊</div><div class="line">				coori[j][0] = sc.nextDouble();</div><div class="line">				coori[j][1] = sc.nextDouble();</div><div class="line">			&#125;</div><div class="line">			double[] tmp = new double[2];// 因為不知道這個是不是與前兩個座標一樣，故為tmp</div><div class="line">			tmp[0] = sc.nextDouble();</div><div class="line">			tmp[1] = sc.nextDouble();</div><div class="line">			if (tmp[0] == coori[0][0] &amp;&amp; tmp[1] == coori[0][1]) &#123;// tmp跟左邊的座標相同</div><div class="line">				tmp[0] = sc.nextDouble();// 將tmp置換成第三個座標</div><div class="line">				tmp[1] = sc.nextDouble();</div><div class="line">				getForthPoint(tmp, coori, 1, 0);</div><div class="line">			&#125; else if (tmp[0] == coori[1][0] &amp;&amp; tmp[1] == coori[1][1]) &#123;// tmp跟右邊的座標相同</div><div class="line">				tmp[0] = sc.nextDouble();// 將tmp置換成第三個座標</div><div class="line">				tmp[1] = sc.nextDouble();</div><div class="line">				getForthPoint(tmp, coori, 0, 1);</div><div class="line"></div><div class="line">			&#125; else &#123;// tmp 並不跟前兩個座標相同，一樣還是要判斷是左邊的還是右邊的，才知道方向。</div><div class="line">				double sameX = sc.nextDouble();</div><div class="line">				double sameY = sc.nextDouble();</div><div class="line">				if (sameX == coori[0][0] &amp;&amp; sameY == coori[0][1]) &#123;// same</div><div class="line">																	// 跟左邊座標相同</div><div class="line">					getForthPoint(tmp, coori, 1, 0);</div><div class="line">				&#125; else if (sameX == coori[1][0] &amp;&amp; sameY == coori[1][1]) &#123;// same跟右邊座標相同</div><div class="line">					getForthPoint(tmp, coori, 0, 1);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/18/10922-2-the-9s-第六周作業一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/10/18/10922-2-the-9s-第六周作業一/" itemprop="url">10922  2 the 9s 第六周作業一</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-18T23:50:02+08:00">
+                2017-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
+                    <span itemprop="name">Java作業</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">/*Author : 蔡宗翰</div><div class="line"> *學號:410577003</div><div class="line"> *Date : 2017/10/18</div><div class="line"> *第六周作業一 10922 : 2 the 9s</div><div class="line"> */</div><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class A410577003_6_1 &#123;</div><div class="line">	/*</div><div class="line">	 * 解法：每個字元相加，判斷總數是否&lt;10，是-&gt;判斷是否為9，若為9則印出答案，若不是9則印出非9倍數。 如果大於10， 則繼續加總。</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		String numbers;</div><div class="line">		while (!(numbers = sc.next()).equals(&quot;0&quot;)) &#123;// 0為中斷條件</div><div class="line">			System.out.print(numbers + &apos; &apos;);</div><div class="line">			int ans = 0;</div><div class="line">			while (true) &#123;</div><div class="line">				ans++;</div><div class="line">				int sum = 0;</div><div class="line">				for (char nowNumber : numbers.toCharArray())// 將numbers</div><div class="line">															// 一個一個放到char中進行加總</div><div class="line">					sum += nowNumber - &apos;0&apos;;</div><div class="line">				if (sum &lt; 10) &#123;// 代表只剩下一個數字</div><div class="line">					if (sum == 9)// 代表為9的倍數</div><div class="line">						System.out.println(&quot;is a multiple of 9 and has 9-degree &quot; + ans + &apos;.&apos;);</div><div class="line">					else// 代表非9的倍數</div><div class="line">						System.out.println(&quot;is not a multiple of 9.&quot;);</div><div class="line">					break;</div><div class="line">				&#125;</div><div class="line">				numbers = Integer.toString(sum);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/18/List/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1468,326 +1750,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/如何使用Hexo-Github-page架設專屬免費部落格-教學/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Taki">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/Taki/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taki Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Taki/2017/10/10/如何使用Hexo-Github-page架設專屬免費部落格-教學/" itemprop="url">如何使用Hexo + Github page架設專屬免費部落格(教學)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-10T14:39:44+08:00">
-                2017-10-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Taki/categories/部落格/" itemprop="url" rel="index">
-                    <span itemprop="name">部落格</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="教學"><a href="#教學" class="headerlink" title="教學"></a>教學</h1><h2 id="．資料參考來源"><a href="#．資料參考來源" class="headerlink" title="．資料參考來源"></a>．資料參考來源</h2><ul>
-<li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo 官方文件</a> <em>&lt;- 他是中文的，他是中文的，他是中文的</em></li>
-<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
-<li><a href="http://markdown.tw/" target="_blank" rel="external">Markdown文件</a> <em>&lt;- 它也是中文的!!!</em></li>
-<li><a href="https://sean.life/2016/09/16/Create-a-personl-blog-website/" target="_blank" rel="external">建立個人部落格</a></li>
-<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">建立分類頁面</a></li>
-<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E4%BA%91%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">建立標籤</a></li>
-<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA-%22%E5%85%B3%E4%BA%8E%E6%88%91%22-%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">建立關於頁面</a></li>
-<li><a href="http://gundambox.github.io/2015/10/06/hexo%E7%95%99%E8%A8%80%E8%88%87%E4%B8%BB%E9%A1%8C%E8%A8%AD%E5%AE%9A/" target="_blank" rel="external">hexo留言與主題設定</a><em>(大頭貼設定以及留言板設定)</em><blockquote>
-<p>以上 參考時間 2017/8/17</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="．建立環境"><a href="#．建立環境" class="headerlink" title="．建立環境"></a>．建立環境</h2><blockquote>
-<p>我的系統是 windows10，mac的不會QAQ，google上非常多資訊，只是可能要再自己消化。</p>
-</blockquote>
-<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><ul>
-<li><a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">安裝方法</a></li>
-</ul>
-<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><ul>
-<li><a href="https://git-scm.com/download/" target="_blank" rel="external">下載</a></li>
-</ul>
-<h3 id="文字編輯器，個人使用sublime3"><a href="#文字編輯器，個人使用sublime3" class="headerlink" title="文字編輯器，個人使用sublime3"></a>文字編輯器，個人使用sublime3</h3><ul>
-<li><a href="https://drive.google.com/file/d/0B4Uh6_dwqtZ5NVB1WXRqVHMtWVk/view" target="_blank" rel="external">下載</a> + <a href="https://drive.google.com/file/d/0B4Uh6_dwqtZ5azNaZnVlZEZlTk0/view" target="_blank" rel="external">序號</a> 這是免安裝版本，序號的填入就請自行Google一下拉~ 相信不會很難的!</li>
-</ul>
-<blockquote>
-<p>記得，在下面的code中，發現太長不好找時，ctr+F5 是你的好夥伴^.^</p>
-</blockquote>
-<h3 id="終端機"><a href="#終端機" class="headerlink" title="終端機"></a>終端機</h3><p>Ctr+r &lt;- 開啟搜尋，鍵入cmd，歡迎看見你的終端機。<br>至於資料夾存放位置的部分，自行決定(個人放在D槽)。如果有C、D槽，系統一開始會再<code>C:\User\XXX&gt;</code>，要進D槽，請鍵入<code>D:</code>。<br>進哪個資料夾就鍵入<code>cd 位置</code>，這樣講還不行，Google吧。</p>
-<h3 id="GitHub帳號"><a href="#GitHub帳號" class="headerlink" title="GitHub帳號"></a>GitHub帳號</h3><ol>
-<li>申請完帳號後，到右上方+字符號，點選new repository。<br><img src="http://i.imgur.com/U2fE8G2l.jpg"></li>
-<li>進入後，輸入repository name，隨你喜好，只要右邊有綠色勾勾就可以。<br><img src="http://i.imgur.com/7bu5nJnl.jpg"></li>
-<li>按下create repository後出來的畫面。<br><img src="http://i.imgur.com/15yam2ll.jpg"><br>好了 ，就這麼簡單，你的repository就建好了，剩下，對於不熟悉code的人來說有些可怕，不用怕，關掉它吧!<br>接下來的設定文件，先把git要設定的關鍵詞先放在這裡，等等要用時直接回頭複製貼上。</li>
-</ol>
-<h3 id="關鍵詞整理Github"><a href="#關鍵詞整理Github" class="headerlink" title="關鍵詞整理Github"></a>關鍵詞整理Github</h3><pre><code>url: https://username.github.io/repositoryname
-root: /repositoryname/
-type: git
-repo: https://github.com/username/repositoryname.git
-branch: master
-</code></pre><p><strong>其中 <code>username</code>就是你申請github時的username，<code>repositoryname</code>就是上面第二步你所填的名稱</strong></p>
-<h2 id="．安裝Hexo-Hexo-hey-視覺化後台"><a href="#．安裝Hexo-Hexo-hey-視覺化後台" class="headerlink" title="．安裝Hexo + Hexo-hey(視覺化後台)"></a>．安裝Hexo + Hexo-hey(視覺化後台)</h2><pre><code>$ npm install -g hexo-cli(安裝hexo)
-$ cd 進想要存放blog的位置
-$ hexo init yourname (產生一個yourname的 hexo網站)
-</code></pre><blockquote>
-<p>此處yourname請自行命名。</p>
-</blockquote>
-<p><code>$ cd yourname</code><br><code>$ npm install</code>(將網站安裝上去)<br><code>$ npm install hexo-hey --save</code>(安裝hexo-hey 視覺化的後台，為了之後po文時編輯的方便)<br><code>$ npm install hexo-deployer-git --save</code>(這是為了之後將hexo deploy上github pages上所需安裝的套件)</p>
-<p>好了，需要安裝的差不多了。</p>
-<blockquote>
-<p>個人是習慣先把必須安裝的安裝完再一次性進行設定，雖然出錯風險高，但按照步驟不會錯的。</p>
-</blockquote>
-<p>接下來，開啟文字編輯器(sublime3)，使用方法這邊就不教。</p>
-<blockquote>
-<p>open folder，找到資料夾，按下確認。(歐 我還是教了Orz)</p>
-</blockquote>
-<h2 id="．設定"><a href="#．設定" class="headerlink" title="．設定"></a>．設定</h2><hr>
-<p><strong>最重要、最重要、最重要(大坑)</strong>： (我特別拉一區給它，雖然位置應該要下去，但，實在太重要，先放在上面)</p>
-<ol>
-<li>你所有的設定，例如 title: taki blog 冒號後面，必須必須要加上一個<strong>空白</strong>，<br>仔細看sublime3，編輯文字時，你便會發現區別。</li>
-<li><p>在這裏面的設定，所有都只能夠有一個空白，任何少或者多都會造成無作用，因此，這點必須注意!<br>如同你所看到的，deploy下面的子選項type，跟母選項，只含有<em><strong>1個tab的距離</strong></em>，任何多或少，都會Boom，搞到死都不知道錯在哪…。</p>
-<pre><code>deploy:
-    type:    
-</code></pre></li>
-</ol>
-<hr>
-<h3 id="第一步-設定基本資料"><a href="#第一步-設定基本資料" class="headerlink" title="第一步 設定基本資料"></a>第一步 設定基本資料</h3><p>點開<code>yourname/_config.yml</code>(這個，便是整個網站設定的核心部分，至於詳細各個設定請參閱Hexo文件)<br>在最上面會看到這個</p>
-<blockquote>
-<p>以下是我已經改過的，屬於部落格的個人資料，可以自行改動。</p>
-</blockquote>
-<pre><code>title: Taki Blog
-subtitle: Taki Blog
-description:
-author: Taki
-language: zh-tw
-timezone:
-</code></pre><h3 id="第二步-設定部屬-deploy"><a href="#第二步-設定部屬-deploy" class="headerlink" title="第二步 設定部屬(deploy)"></a>第二步 設定部屬(deploy)</h3><p>在往下一點點看<br>便會看到這個</p>
-<p>下面的也是經過改動的。</p>
-<pre><code>url: https://username.github.io/repositoryname/
-root: /repositoryname/
-permalink: :year/:month/:day/:title/
-permalink_defaults:    
-</code></pre><p>接下來，<strong>拉到最下面</strong>找到這個</p>
-<pre><code>deploy:
-    type:
-</code></pre><p>改成</p>
-<pre><code>deploy:
-  type: git
-  repo: https://github.com/username/repositoryname.git
-  branch: master
-</code></pre><blockquote>
-<p>有沒有發現什麼? 沒錯，就是複製貼上剛剛在上面做的事情，其實是我跌坑跌最慘的，所以才會先做一下筆記Orz<br>需要更改、新增的地方便是url, root, type, repo, branch(這個可有可無，系統也會自己抓，但我還是用master，因為我不想讓它使用其他分支，這個大概只會用來做我的網站用。)</p>
-</blockquote>
-<h3 id="第三步-設定後台"><a href="#第三步-設定後台" class="headerlink" title="第三步 設定後台"></a>第三步 設定後台</h3><p>下面一行再新增這個，這個是做為後台所需要的</p>
-<pre><code># Admin
-admin:
-    name: hexo
-    password: hey
-    secret: hey hexo
-    expire: 60*1
-    # cors: http://localhost:3000
-</code></pre><p>太棒了，基本上的設定，就差不多這樣!</p>
-<h2 id="．寫下自己第一個的文章吧"><a href="#．寫下自己第一個的文章吧" class="headerlink" title="．寫下自己第一個的文章吧!"></a>．寫下自己第一個的文章吧!</h2><p><em>注意：以下所有指令，都必須再yourname這個資料夾底下進行</em></p>
-<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><p>後面()部分為簡寫。以下排列是有意義的，前三步，基本上是對文件做任何改動後必須做的流程，hexo d 就做為當你認為你的網站已經可以上去了就把它deploy上去吧。</p>
-<p><code>$ hexo clean</code> 清除public。對於每次的改動，都必須要先做一次這一個<br><code>$ hexo generate</code> (<code>hexo g</code>) 生成靜態文件，會於當前目錄下產生一個public的資料夾，這個資料夾將來會是deploy上Github 的一個文件夾，裡面包含你整個網站。<br><code>$ hexo server</code> (<code>hexo s</code>) 開啟本地web服務，讓你可以先不用deploy到Github上，就可以先行預覽你的網站。<br><code>$ hexo deploy</code> (<code>hexo d</code>) 部屬(deploy)到Github上</p>
-<h3 id="常用組合鍵"><a href="#常用組合鍵" class="headerlink" title="常用組合鍵"></a>常用組合鍵</h3><p><code>$ hexo s -g</code> 生成後預覽</p>
-<p>那麼 遊戲開始(?)</p>
-<h3 id="第一步-產生我的網站"><a href="#第一步-產生我的網站" class="headerlink" title="第一步 產生我的網站"></a>第一步 產生我的網站</h3><p><code>$ hexo g</code> 產生靜態文件<br><code>$ hexo s</code> 預覽網站</p>
-<p>接下來，打開你的瀏覽器輸入<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> ，由於上面的設定(url &amp; root)，<br>所以你的網址會自動變成這樣<code>http://localhost:4000/repositoryname/</code>這是正常的。</p>
-<p>恩 就這樣你的網站就這樣好了(！？)</p>
-<hr>
-<h4 id="文章-post-與-網頁-page-差別"><a href="#文章-post-與-網頁-page-差別" class="headerlink" title="文章(post) 與 網頁(page)差別?"></a>文章(post) 與 網頁(page)差別?</h4><blockquote>
-<p>好吧，這是我從網路上看到後記下來的東西，如果有錯，批小力點QQ</p>
-</blockquote>
-<p>post 屬於日常、動態的，它有分類、標籤這些功能。(系統預先設定的便是這個)<br>page 屬於不會經常性更動的類型，因此，像是about, tags, categorys這類分頁，都屬於page的範疇</p>
-<p>對了，其實指令也有這兩個 (<em>中括號都要去掉 </em>)<br><code>$ hexo new [title]</code> 建立一個post 的 title文件<br><code>$ hexo new page [title]</code> 建立一個page 的 title文件</p>
-<p>至於為什麼不使用，原因很簡單，我們有後台拉(hexo-hey)~要這些做啥?有後台+markdown，寫一篇自己的部落格不難!</p>
-<hr>
-<h3 id="第二步-編輯我的文章"><a href="#第二步-編輯我的文章" class="headerlink" title="第二步 編輯我的文章"></a>第二步 編輯我的文章</h3><p>請於瀏覽器上方輸入<a href="http://localhost:4000/admin" target="_blank" rel="external">http://localhost:4000/admin</a> (&lt;- 或用力戳它XD)</p>
-<pre><code>帳號：hexo
-密碼：hey
-</code></pre><p>恭喜你，看到了你的後台。(請自行摸索一下，它的功能實在是簡單到不想做這個筆記…)</p>
-<p>沒有錯，其實我也只是第一次碰這個東西所以它除了learning markdown這個文章之外，根本就沒有其它東西<br><img src="http://i.imgur.com/U2T7lc3l.jpg"></p>
-<p>寫到目前的文章<br><img src="http://i.imgur.com/2KBmlOXl.jpg"></p>
-<p>上面有一個新建這個按鈕，接下來，就靠你的雙手，自學一下markdown這個簡單的語言吧(普通大概也就花個30-40分鐘就會了)~</p>
-<h3 id="第三步-deploy到你的Github-pages上"><a href="#第三步-deploy到你的Github-pages上" class="headerlink" title="第三步 deploy到你的Github pages上"></a>第三步 deploy到你的Github pages上</h3><p>終於到了這一步!</p>
-<p>(這邊我都假設你是正常狀況下，如果不是正常狀況，你可能要在自己debug一下看看是不是哪裡做錯了，我這邊基本上都測過是可以的)</p>
-<p><code>$ hexo d</code>輸入吧，就是這樣。<br><img src="http://i.imgur.com/UW6OuX8l.jpg"></p>
-<p>你覺得這些很醜? 沒關係，有一個名人說過這類的話</p>
-<blockquote>
-<p>如果你在發布你第一件產品的幾年後，回過頭來看，如果你不覺得很丟臉，那麼你起步得太慢了!<br>正確的方式應該是，做好準備後(不需要萬全)，就起步，然後再快速調整，穩定輸出。 – 給有完美主義的你</p>
-</blockquote>
-<p>看吧(好吧，你應該是不會有大頭照、標籤、分類、關於以及theme也不是長這樣，但這些之後再說。)<br><img src="http://i.imgur.com/g1S5SpZl.jpg"></p>
-<p>恭喜啦! 基本上，po文必需的事情地做完了!</p>
-<h2 id="．Theme更換以及分類、標籤、關於頁面"><a href="#．Theme更換以及分類、標籤、關於頁面" class="headerlink" title="．Theme更換以及分類、標籤、關於頁面"></a>．Theme更換以及分類、標籤、關於頁面</h2><h3 id="第一步-clone-主題資料"><a href="#第一步-clone-主題資料" class="headerlink" title="第一步 clone 主題資料"></a>第一步 clone 主題資料</h3><blockquote>
-<p>這個也是在yourname資下夾下輸入<br><strong>注意：在日後需要clone theme時 ，注意後面要加上一個 themes/主題名稱 ，這個是跟git說，我要clone到這個資料夾，如果資料夾不存在，它會自己生成。</strong></p>
-</blockquote>
-<p><code>$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code> (如果你很懶的話，那就跟著潮流走吧)</p>
-<h3 id="第二步-開啟主題"><a href="#第二步-開啟主題" class="headerlink" title="第二步 開啟主題"></a>第二步 開啟主題</h3><p>使用文字編輯器(sublime3)進<code>yourname/_config.yml</code>更改成</p>
-<p><code>theme: next</code></p>
-<h3 id="第三步-分類、標籤、關於頁面、大頭照片的啟用"><a href="#第三步-分類、標籤、關於頁面、大頭照片的啟用" class="headerlink" title="第三步 分類、標籤、關於頁面、大頭照片的啟用"></a>第三步 分類、標籤、關於頁面、大頭照片的啟用</h3><p>關於裡面所有的<code>_config.yml</code>都是指<code>themes/next</code>下的哦! 千萬別搞錯了</p>
-<ul>
-<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">建立分類頁面</a></li>
-<li><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E4%BA%91%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">建立標籤</a></li>
-<li><p><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA-%22%E5%85%B3%E4%BA%8E%E6%88%91%22-%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">建立關於頁面</a><br>關於頁面，此頁面的編輯，請開啟文字編輯器(sublime3)，到<code>source/about/index.md</code>直接編輯，這個無法使用後台進行編輯。</p>
-<blockquote>
-<p>仔細看，它是.md檔，因此，它是markdown文件，你是怎麼使用Hey hexo後台的，就怎麼樣使用它，只是無法像hey hexo一樣及時看到呈現。</p>
-</blockquote>
-</li>
-<li><p>大頭照片：先將你要的相片(我的相片名稱avatar.jpg)放到<code>yourname/source/images</code>底下，進<code>yourname/themes/_config.yml</code>下改成，他一開始是用<code>#</code>被註解掉的，請使用backspace變成底下</p>
-<pre><code>avatar: /images/avatar.jpg
-</code></pre></li>
-</ul>
-<h3 id="第四步-重要三指令"><a href="#第四步-重要三指令" class="headerlink" title="第四步 重要三指令"></a>第四步 重要三指令</h3><pre><code>$ hexo clean
-$ hexo g
-$ hexo s
-</code></pre><p>接下來，就細細的觀賞你的部落格吧，別忘了，欣賞完(沒問題後)要記得<code>$ hexo d</code>讓他上去讓大家也欣賞你個人的部落格囉。</p>
-<h2 id="．留言板設置"><a href="#．留言板設置" class="headerlink" title="．留言板設置"></a>．留言板設置</h2><h3 id="註冊與設定"><a href="#註冊與設定" class="headerlink" title="註冊與設定"></a>註冊與設定</h3><ol>
-<li><p>選擇get start<br><img src="http://i.imgur.com/PHPbuwsl.jpg"></p>
-</li>
-<li><p>選擇I Want to install Disqus on my site<br><img src="http://i.imgur.com/n9dxBfsl.jpg"></p>
-</li>
-<li><p>填上自己想要的website name<br><img src="http://i.imgur.com/LW2gxWql.jpg"></p>
-</li>
-<li><p>請滑到最上面關鍵詞整理Github，把你的url輸入。<br><img src="http://i.imgur.com/9o7phAtl.jpg"></p>
-</li>
-<li><p>選擇你的website<br><img src="http://i.imgur.com/7bu5nJnl.jpg"></p>
-</li>
-</ol>
-<p>6.找到你的shortname，並且複製起來(其實就是你剛剛註冊時填上的websitename)<br><img src="http://i.imgur.com/xjBAarql.jpg"></p>
-<p>接下來，開啟文字編輯器(sublime3)，開啟themes/你所設定的主題<code>_config.yml</code>，尋找<code>disqus</code>，並改成下列</p>
-<pre><code>#Disqus    
-disqus:
-  enable: true
-  shortname: 你的shortname
-  count: true
-</code></pre><p>儲存後，於終端機鍵入三指令<code>$ hexo clean</code> <code>$ hexo g</code> <code>$ hexo s</code><br>觀賞吧，你的網站。<br>至於 關於、標籤、分類頁面上都會有留言板，可以滑到上面教學，裡面有處理辦法，請再次回去看吧。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/Taki/page/2/">2</a><a class="extend next" rel="next" href="/Taki/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1835,7 +1804,7 @@ disqus:
               
                 <a href="/Taki/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
