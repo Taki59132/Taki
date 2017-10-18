@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Taki Blog">
 <meta property="og:description" content="List(ArrayList)可變長度的陣列123456789101112131415161718192021import java.util.*;public class D2017_10_18 &amp;#123;	public static void main(String[] args) &amp;#123;		List&amp;lt;String&amp;gt; myList = new ArrayList&amp;lt;St">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2017-10-18T03:57:24.276Z">
+<meta property="og:updated_time" content="2017-10-18T17:55:22.203Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="List">
 <meta name="twitter:description" content="List(ArrayList)可變長度的陣列123456789101112131415161718192021import java.util.*;public class D2017_10_18 &amp;#123;	public static void main(String[] args) &amp;#123;		List&amp;lt;String&amp;gt; myList = new ArrayList&amp;lt;St">
@@ -163,7 +163,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">Taki Blog</p>
+        <p class="site-subtitle"></p>
       
   </div>
 
@@ -389,6 +389,7 @@
 
       
         <h2 id="List-ArrayList-可變長度的陣列"><a href="#List-ArrayList-可變長度的陣列" class="headerlink" title="List(ArrayList)可變長度的陣列"></a>List(ArrayList)可變長度的陣列</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class D2017_10_18 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		List&lt;String&gt; myList = new ArrayList&lt;String&gt;();// 使用ArrayList</div><div class="line">		myList.add(&quot;Hello&quot;);// 新增內容</div><div class="line">		myList.add(&quot;World&quot;);</div><div class="line">		myList.add(&quot;myList&quot;);</div><div class="line">		myList.add(1, &quot;test&quot;);</div><div class="line">		myList.add(new String(&quot;wrapped&quot;)); // 手動包裝</div><div class="line">		myList.set(0, &quot;Replacement&quot;);// 修改內容值</div><div class="line">		String tmp = myList.get(3);// 提取內容物</div><div class="line"></div><div class="line">		System.out.println(myList);</div><div class="line">		System.out.println(tmp);</div><div class="line">		System.out.println(myList.indexOf(&quot;World&quot;));// 尋找值的引索，不存在回傳-1</div><div class="line">		System.out.println(myList.isEmpty());// 檢查是否為空</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="CH2-p22-Phone-Directory-Application-完整程式碼"><a href="#CH2-p22-Phone-Directory-Application-完整程式碼" class="headerlink" title="CH2, p22 Phone Directory Application 完整程式碼"></a>CH2, p22 Phone Directory Application 完整程式碼</h2><ol>
 <li>obj == this 此行成立於當一個物件是reference from另一個物件時，因此，他們的object ID將會一樣。</li>
 <li>getClass() 將會回傳當前class名稱，此例對this.getClass()-&gt;DirectoryEntry </li>
@@ -426,7 +427,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Taki/2017/10/17/AndroRat-安裝-設定/" rel="next" title="AndroRat 安裝+設定">
+              <a href="/Taki/2017/10/17/AndroRat/" rel="next" title="AndroRat 安裝+設定">
                 <i class="fa fa-chevron-left"></i> AndroRat 安裝+設定
               </a>
             
@@ -436,7 +437,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Taki/2017/10/18/10922-2-the-9s-第六周作業一/" rel="prev" title="10922  2 the 9s 第六周作業一">
+              <a href="/Taki/2017/10/18/10922-2-the-9s/" rel="prev" title="10922  2 the 9s 第六周作業一">
                 10922  2 the 9s 第六周作業一 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -509,7 +510,7 @@
                 alt="Taki" />
             
               <p class="site-author-name" itemprop="name">Taki</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">如果帥是一種罪，那我犯了滔天大罪</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -767,7 +768,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {

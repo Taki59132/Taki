@@ -81,13 +81,16 @@
 
 
 
+<meta name="description" content="如果帥是一種罪，那我犯了滔天大罪">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Taki Blog">
 <meta property="og:url" content="https://Taki59132.github.io/Taki/index.html">
 <meta property="og:site_name" content="Taki Blog">
+<meta property="og:description" content="如果帥是一種罪，那我犯了滔天大罪">
 <meta property="og:locale" content="zh-tw">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Taki Blog">
+<meta name="twitter:description" content="如果帥是一種罪，那我犯了滔天大罪">
 
 
 
@@ -159,7 +162,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">Taki Blog</p>
+        <p class="site-subtitle"></p>
       
   </div>
 
@@ -295,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/18/10242-Fourth-Point-第六周作業二/">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/18/10242-Fourth-Point/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taki">
@@ -314,7 +317,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Taki/2017/10/18/10242-Fourth-Point-第六周作業二/" itemprop="url">10242 Fourth Point !! 第六周作業二</a></h1>
+                <a class="post-title-link" href="/Taki/2017/10/18/10242-Fourth-Point/" itemprop="url">10242 Fourth Point !! 第六周作業二</a></h1>
         
 
         <div class="post-meta">
@@ -436,7 +439,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/18/10922-2-the-9s-第六周作業一/">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/18/10922-2-the-9s/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taki">
@@ -455,7 +458,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Taki/2017/10/18/10922-2-the-9s-第六周作業一/" itemprop="url">10922  2 the 9s 第六周作業一</a></h1>
+                <a class="post-title-link" href="/Taki/2017/10/18/10922-2-the-9s/" itemprop="url">10922  2 the 9s 第六周作業一</a></h1>
         
 
         <div class="post-meta">
@@ -669,15 +672,14 @@
 
       
         
-          
-            <h2 id="List-ArrayList-可變長度的陣列"><a href="#List-ArrayList-可變長度的陣列" class="headerlink" title="List(ArrayList)可變長度的陣列"></a>List(ArrayList)可變長度的陣列</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class D2017_10_18 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		List&lt;String&gt; myList = new ArrayList&lt;String&gt;();// 使用ArrayList</div><div class="line">		myList.add(&quot;Hello&quot;);// 新增內容</div><div class="line">		myList.add(&quot;World&quot;);</div><div class="line">		myList.add(&quot;myList&quot;);</div><div class="line">		myList.add(1, &quot;test&quot;);</div><div class="line">		myList.add(new String(&quot;wrapped&quot;)); // 手動包裝</div><div class="line">		myList.set(0, &quot;Replacement&quot;);// 修改內容值</div><div class="line">		String tmp = myList.get(3);// 提取內容物</div><div class="line"></div><div class="line">		System.out.println(myList);</div><div class="line">		System.out.println(tmp);</div><div class="line">		System.out.println(myList.indexOf(&quot;World&quot;));// 尋找值的引索，不存在回傳-1</div><div class="line">		System.out.println(myList.isEmpty());// 檢查是否為空</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="CH2-p22-Phone-Directory-Application-完整程式碼"><a href="#CH2-p22-Phone-Directory-Application-完整程式碼" class="headerlink" title="CH2, p22 Phone Directory Application 完整程式碼"></a>CH2, p22 Phone Directory Application 完整程式碼</h2><ol>
-<li>obj == this 此行成立於當一個物件是reference from另一個物件時，因此，他們的object ID將會一樣。</li>
-<li>getClass() 將會回傳當前class名稱，此例對this.getClass()-&gt;DirectoryEntry </li>
-<li><strong><em>Problem</em></strong> : No enclosing instance of type E is accessible. Must qualify the allocation with an enclosing instance of type E(egxnew A() where x is an instance of E).<br> <strong><em>Solution</em></strong> : 將public class改為public static class.<br> <strong><em>原因</em></strong>: 在Java中，類別中的靜態方法不能直接調用動態方法。只有將某個內部類修飾為靜態類，然後才能夠在靜態類中調用該類的成員變量與成員方法。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class D2017_10_18 &#123;</div><div class="line">	public static class DirectoryEntry &#123;</div><div class="line">		String name;</div><div class="line">		String number;</div><div class="line"></div><div class="line">		DirectoryEntry(String name, String number) &#123;</div><div class="line">			this.name = name;</div><div class="line">			this.number = number;</div><div class="line">		&#125;</div><div class="line">		DirectoryEntry() &#123;</div><div class="line">			name = &quot;&quot;;</div><div class="line">			number = &quot;&quot;;</div><div class="line">		&#125;</div><div class="line">		public boolean equals(Object obj) &#123;</div><div class="line">		    if (obj == this) return true;</div><div class="line">		    if (obj == null) return false;</div><div class="line">		    if (this.getClass() == obj.getClass()) &#123;</div><div class="line">		    	DirectoryEntry other = (DirectoryEntry) obj;</div><div class="line">		        return name.equals(other.name) &amp;&amp; number.equals(other.number);</div><div class="line">		    &#125; else &#123;</div><div class="line">		        return false;</div><div class="line">		    &#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	//下面這一行就是例子，因為少加了一個static</div><div class="line">	private static ArrayList&lt;DirectoryEntry&gt; theDirectory = new ArrayList&lt;DirectoryEntry&gt;();</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line"></div><div class="line">		theDirectory.add(new DirectoryEntry(&quot;Jane Smith&quot;, &quot;555-1212&quot;));</div><div class="line"></div><div class="line">		int index = theDirectory.indexOf(new DirectoryEntry(&quot;Jane Smith&quot;, &quot;555-1212&quot;));</div><div class="line">		DirectoryEntry dE = new DirectoryEntry();</div><div class="line">		if (index != -1)</div><div class="line">			dE = theDirectory.get(index);</div><div class="line">		else</div><div class="line">			dE = null;</div><div class="line">		System.out.println(dE.name+&apos; &apos;+dE.number);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
+          <h2 id="List-ArrayList-可變長度的陣列"><a href="#List-ArrayList-可變長度的陣列" class="headerlink" title="List(ArrayList)可變長度的陣列"></a>List(ArrayList)可變長度的陣列</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class D2017_10_18 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		List&lt;String&gt; myList = new ArrayList&lt;String&gt;();// 使用ArrayList</div><div class="line">		myList.add(&quot;Hello&quot;);// 新增內容</div><div class="line">		myList.add(&quot;World&quot;);</div><div class="line">		myList.add(&quot;myList&quot;);</div><div class="line">		myList.add(1, &quot;test&quot;);</div><div class="line">		myList.add(new String(&quot;wrapped&quot;)); // 手動包裝</div><div class="line">		myList.set(0, &quot;Replacement&quot;);// 修改內容值</div><div class="line">		String tmp = myList.get(3);// 提取內容物</div><div class="line"></div><div class="line">		System.out.println(myList);</div><div class="line">		System.out.println(tmp);</div><div class="line">		System.out.println(myList.indexOf(&quot;World&quot;));// 尋找值的引索，不存在回傳-1</div><div class="line">		System.out.println(myList.isEmpty());// 檢查是否為空</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Taki/2017/10/18/List/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -724,7 +726,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/17/AndroRat-安裝-設定/">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/17/AndroRat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taki">
@@ -743,7 +745,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Taki/2017/10/17/AndroRat-安裝-設定/" itemprop="url">AndroRat 安裝+設定</a></h1>
+                <a class="post-title-link" href="/Taki/2017/10/17/AndroRat/" itemprop="url">AndroRat 安裝+設定</a></h1>
         
 
         <div class="post-meta">
@@ -816,95 +818,17 @@
 
       
         
-          
-            <h2 id="Github下載："><a href="#Github下載：" class="headerlink" title="Github下載："></a>Github下載：</h2><blockquote>
+          <h2 id="Github下載："><a href="#Github下載：" class="headerlink" title="Github下載："></a>Github下載：</h2><blockquote>
 <p>網址： <a href="https://github.com/DesignativeDave/androrat" target="_blank" rel="external">https://github.com/DesignativeDave/androrat</a> (下圖)</p>
 </blockquote>
-<p><img src="https://i.imgur.com/pTCU7Ca.png"></p>
-<blockquote>
-<p>先用<code>cd</code>進入想要存放的磁碟<br>再使用git clone <a href="https://github.com/DesignativeDave/androrat.git" target="_blank" rel="external">https://github.com/DesignativeDave/androrat.git</a> (下圖)</p>
-</blockquote>
-<p><img src="https://i.imgur.com/CWifTa7.png"></p>
-<h2 id="Android-Studio下載"><a href="#Android-Studio下載" class="headerlink" title="Android Studio下載"></a>Android Studio下載</h2><blockquote>
-<p>網址：<a href="https://developer.android.com/studio/index.html" target="_blank" rel="external">https://developer.android.com/studio/index.html</a> (下圖)</p>
-</blockquote>
-<p><img src="https://i.imgur.com/RgSLQ7O.png"></p>
-<blockquote>
-<p>安裝完成圖(下圖)</p>
-</blockquote>
-<p><img src="https://i.imgur.com/PEdM1XJ.png"></p>
-<blockquote>
-<p>選擇第三個import project(Eclipse ADT,Gradle,etc.)(下圖)</p>
-</blockquote>
-<p><img src="https://i.imgur.com/6F2YESt.png"></p>
-<blockquote>
-<p>按下<code>...</code>選擇剛剛從github clone下來的資料夾中<code>androat\src\Androrat</code>這個資料夾(下圖)</p>
-</blockquote>
-<p><img src="https://i.imgur.com/tJ3Q3It.png"></p>
-<blockquote>
-<p>下一步會需要將之前<code>eclipse workspace</code>的位置給Android Studio(下圖)</p>
-</blockquote>
-<p><img src="https://i.imgur.com/ru8CCgt.png"><br><img src="https://i.imgur.com/XgDhool.png"><br><img src="https://i.imgur.com/NINMpO8.png"></p>
-<blockquote>
-<p>更改IP與Port(下圖)</p>
-</blockquote>
-<p><img src="https://i.imgur.com/doCfIdB.jpg"></p>
-<blockquote>
-<p>輸出APK檔案(下圖)</p>
-</blockquote>
-<p><img src="https://i.imgur.com/FfPIx0Y.png"><br><img src="https://i.imgur.com/GkxWx8q.png"></p>
-<blockquote>
-<p>將APK裝到手機上<br><img src="https://i.imgur.com/uAsizF8.jpg"></p>
-</blockquote>
-<h2 id="AndroRatServer使用"><a href="#AndroRatServer使用" class="headerlink" title="AndroRatServer使用"></a>AndroRatServer使用</h2><blockquote>
-<p>開啟eclipse，並開啟檔案</p>
-</blockquote>
-<p><img src="https://i.imgur.com/XbrJWi5.png"><br><img src="https://i.imgur.com/Uh6TFI4.png"><br><img src="https://i.imgur.com/5qgGyM5.png"><br><img src="https://i.imgur.com/gCo7gaP.png"></p>
-<blockquote>
-<p>接著對剛開起的專案按下右鍵，選擇properties</p>
-</blockquote>
-<p><img src="https://i.imgur.com/4NmkU8j.png"></p>
-<blockquote>
-<p>剛開始應該都是紅色叉叉，按下<code>Add External JARs</code>，將<code>androRat\src\api</code>中所有jar檔選取。</p>
-</blockquote>
-<p><img src="https://i.imgur.com/YoIuOFi.png"><br><img src="https://i.imgur.com/pBbKoPH.png"></p>
-<blockquote>
-<p>最後對專案按右鍵，選擇<code>Run As</code>-&gt; <code>Java Application</code>，下圖是因為我的手機還開著，所以自動跑了出來最終的結果，正常狀況是不會有任何東西的。</p>
-</blockquote>
-<p><img src="https://i.imgur.com/FVH2xQQ.jpg"></p>
-<h2 id="Port-Forwording-NAT"><a href="#Port-Forwording-NAT" class="headerlink" title="Port Forwording(NAT)"></a>Port Forwording(NAT)</h2><blockquote>
-<p>沒有錯，就是開啟你的機上盒的管理員</p>
-</blockquote>
-<p><img src="https://i.imgur.com/ovRhsKR.png"><br><img src="https://i.imgur.com/vTDSeU6.png"></p>
-<blockquote>
-<p>進入後，開啟NAT，將NAT打開，並使用CMD查詢IP(ipconfig)。</p>
-</blockquote>
-<p><img src="https://i.imgur.com/Juvgygt.png"></p>
-<blockquote>
-<p>打開1337port並指向我電腦所在IP</p>
-</blockquote>
-<p><img src="https://i.imgur.com/TnUG31O.png"></p>
-<h2 id="no-ip-DNS"><a href="#no-ip-DNS" class="headerlink" title="no-ip(DNS)"></a>no-ip(DNS)</h2><p><img src="https://i.imgur.com/sncQMlV.png"></p>
-<blockquote>
-<p>登入後，進入<code>Managed DNS</code>，選擇<code>Add A Host</code>，隨便取個名字，後按下<code>Add Host</code></p>
-</blockquote>
-<p><img src="https://i.imgur.com/9wD17Cx.png"><br><img src="https://i.imgur.com/zQXS7oU.jpg"><br><img src="https://i.imgur.com/NJ1d8ED.jpg"></p>
-<blockquote>
-<p>接著下載noip的Client端</p>
-</blockquote>
-<p><img src="https://i.imgur.com/oqH8DDp.png"></p>
-<blockquote>
-<p>安裝完後，登入後畫面</p>
-</blockquote>
-<p><img src="https://i.imgur.com/ClDPdT3.jpg"></p>
-<p>經過了以上設定後，手機輸入noip所給予的ip，port輸入我們所設定的1337後，按下start server即可。<br>過一段時間後，就變成下圖<br><img src="https://i.imgur.com/FVH2xQQ.jpg"></p>
-<h2 id="使用截圖"><a href="#使用截圖" class="headerlink" title="使用截圖"></a>使用截圖</h2><p><img src="https://i.imgur.com/ZYzhnHq.png"></p>
-<blockquote>
-<p>下圖是真的拿出所有的聯絡人資料，還可以遠端操控撥打電話。</p>
-</blockquote>
-<p><img src="https://i.imgur.com/dqtKXTZ.jpg?1"></p>
-
-          
+<p><img src="https://i.imgur.com/pTCU7Ca.png"><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/Taki/2017/10/17/AndroRat/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -951,7 +875,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/16/第五周作業二-10170-The-Hotel-with-Infinite-Rooms/">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/16/10170The-Hotel-with-Infinite-Rooms/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taki">
@@ -970,7 +894,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Taki/2017/10/16/第五周作業二-10170-The-Hotel-with-Infinite-Rooms/" itemprop="url">10170: The Hotel with Infinite Rooms 第五周作業二</a></h1>
+                <a class="post-title-link" href="/Taki/2017/10/16/10170The-Hotel-with-Infinite-Rooms/" itemprop="url">10170: The Hotel with Infinite Rooms 第五周作業二</a></h1>
         
 
         <div class="post-meta">
@@ -1092,7 +1016,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/16/第五周作業一-118-Mutant-Flatworld-Expolrers/">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/16/118-MutantFlatworldExpolrers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taki">
@@ -1111,7 +1035,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Taki/2017/10/16/第五周作業一-118-Mutant-Flatworld-Expolrers/" itemprop="url">118: Mutant Flatworld Expolrers 第五周作業一</a></h1>
+                <a class="post-title-link" href="/Taki/2017/10/16/118-MutantFlatworldExpolrers/" itemprop="url">118: Mutant Flatworld Expolrers 第五周作業一</a></h1>
         
 
         <div class="post-meta">
@@ -1233,7 +1157,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/Rotating-Sentences/">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/RotatingSentences/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taki">
@@ -1252,7 +1176,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Taki/2017/10/10/Rotating-Sentences/" itemprop="url">490 Rotating Sentences第四周作業二</a></h1>
+                <a class="post-title-link" href="/Taki/2017/10/10/RotatingSentences/" itemprop="url">490 Rotating Sentences第四周作業二</a></h1>
         
 
         <div class="post-meta">
@@ -1374,7 +1298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/What-s-Cryptanalysis/">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/WhatsCryptanalysis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taki">
@@ -1393,7 +1317,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Taki/2017/10/10/What-s-Cryptanalysis/" itemprop="url">10008 What's Cryptanalysis?第四周作業一</a></h1>
+                <a class="post-title-link" href="/Taki/2017/10/10/WhatsCryptanalysis/" itemprop="url">10008 What's Cryptanalysis?第四周作業一</a></h1>
         
 
         <div class="post-meta">
@@ -1515,7 +1439,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/Largest-Square/">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/LargestSquare/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Taki">
@@ -1534,7 +1458,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/Taki/2017/10/10/Largest-Square/" itemprop="url">1090 Largest Square 第三周作業二</a></h1>
+                <a class="post-title-link" href="/Taki/2017/10/10/LargestSquare/" itemprop="url">1090 Largest Square 第三周作業二</a></h1>
         
 
         <div class="post-meta">
@@ -1830,7 +1754,7 @@
                 alt="Taki" />
             
               <p class="site-author-name" itemprop="name">Taki</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">如果帥是一種罪，那我犯了滔天大罪</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -2068,7 +1992,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
