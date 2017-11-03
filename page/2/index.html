@@ -298,6 +298,660 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/RotatingSentences/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/10/10/RotatingSentences/" itemprop="url">490 Rotating Sentences第四周作業二</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-10T15:21:26+08:00">
+                2017-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
+                    <span itemprop="name">Java作業</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Taki/2017/10/10/RotatingSentences/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/10/10/RotatingSentences/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Taki/2017/10/10/RotatingSentences/" class="leancloud_visitors" data-flag-title="490 Rotating Sentences第四周作業二">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/*Author : 蔡宗翰</span></div><div class="line"><span class="comment"> *Date : 2017/10/7</span></div><div class="line"><span class="comment"> *第四周第二題：490 - Rotating Sentences</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * 解法：題目限制句數為100，因此可以不使用vector，直接開100個備用。</span></div><div class="line"><span class="comment"> * 將所有的句子輸入後，反轉90度，最簡單的方式就是，直接用印的，長度不夠的地方補" "，即可防止</span></div><div class="line"><span class="comment"> * compiler噴outofstringindex。</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_4_2</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		String[] sentence = <span class="keyword">new</span> String[<span class="number">100</span>];<span class="comment">//</span></div><div class="line">		<span class="keyword">int</span> maxLine = <span class="number">0</span>, maxLength = <span class="number">0</span>;<span class="comment">// maxLine 用於紀錄有幾行；maxLength用於紀錄最長的句子長度。</span></div><div class="line">		<span class="comment">/*</span></div><div class="line"><span class="comment">		 * 解釋一下下面24-28，下面的作用跟29-34一樣，但Online judge不吃QAQ，所以改成29-34，</span></div><div class="line"><span class="comment">		 * 但是，出現了一個問題，那就是使用29-34的，用eclipse停不下來，所以如果要人工測試，</span></div><div class="line"><span class="comment">		 * 請善用ctrl+shift+c將註解拿掉，然後將29-33用一樣的方式註解掉。</span></div><div class="line"><span class="comment">		 */</span></div><div class="line">		 <span class="keyword">while</span> (!(sentence[maxLine] = sc.nextLine()).equals(<span class="string">""</span>)) &#123;</div><div class="line">		 	<span class="keyword">if</span> (maxLength &lt; sentence[maxLine].length())</div><div class="line">		 	maxLength = sentence[maxLine].length();</div><div class="line">		 	maxLine++;</div><div class="line">		 &#125;</div><div class="line"><span class="comment">//		while (sc.hasNextLine()) &#123;</span></div><div class="line"><span class="comment">//			sentence[maxLine] = sc.nextLine();</span></div><div class="line"><span class="comment">//			if (maxLength &lt; sentence[maxLine].length())</span></div><div class="line"><span class="comment">//				maxLength = sentence[maxLine].length();</span></div><div class="line"><span class="comment">//			maxLine++;</span></div><div class="line"><span class="comment">//		&#125;</span></div><div class="line">		sc.close();</div><div class="line"></div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; maxLength; j++) &#123;<span class="comment">// j &amp; k 對調就是正常的輸出方向。</span></div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = maxLine - <span class="number">1</span>; k &gt;= <span class="number">0</span>; k--) &#123;</div><div class="line">				<span class="keyword">if</span> (j &lt; sentence[k].length())</div><div class="line">					System.out.print(sentence[k].charAt(j));</div><div class="line">				<span class="keyword">else</span></div><div class="line">					System.out.print(<span class="string">' '</span>);<span class="comment">// 不夠的地方補' '以免噴錯誤訊息。</span></div><div class="line">			&#125;</div><div class="line">			System.out.println();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/WhatsCryptanalysis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/10/10/WhatsCryptanalysis/" itemprop="url">10008 What's Cryptanalysis?第四周作業一</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-10T15:19:11+08:00">
+                2017-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
+                    <span itemprop="name">Java作業</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Taki/2017/10/10/WhatsCryptanalysis/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/10/10/WhatsCryptanalysis/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Taki/2017/10/10/WhatsCryptanalysis/" class="leancloud_visitors" data-flag-title="10008 What's Cryptanalysis?第四周作業一">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*Author : 蔡宗翰</span></div><div class="line"><span class="comment"> *Date : 2017/10/4</span></div><div class="line"><span class="comment"> *第四周第一題 What's Cryptanalysis?</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="comment">/*解法： 讀入每一行，變成一個又一個的字元，判斷是否介於A~Z，利用char資料型態為short作為引索值，存於count中，</span></div><div class="line"><span class="comment"> *在使用不換位的泡沫排序列印出來即可。</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_4_1</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">while</span> (sc.hasNextInt()) &#123;<span class="comment">// 讓UVA能夠連續讀入資料</span></div><div class="line">			<span class="keyword">int</span> n = sc.nextInt();</div><div class="line">			<span class="keyword">int</span>[] count = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];<span class="comment">// 英文字母26個</span></div><div class="line">			sc.nextLine();<span class="comment">// nextint後要使用nextline，需要先吃掉後面的換行</span></div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</div><div class="line">				String text = sc.nextLine().toUpperCase();<span class="comment">// 全部換成大寫</span></div><div class="line">				<span class="keyword">for</span> (<span class="keyword">char</span> a : text.toCharArray())</div><div class="line">					<span class="keyword">if</span> (a &gt;= <span class="string">'A'</span> &amp;&amp; a &lt;= <span class="string">'Z'</span>)<span class="comment">// 字母判斷</span></div><div class="line">						count[a - <span class="string">'A'</span>]++;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">26</span>; k++) &#123;<span class="comment">// 不換位的泡沫排序法</span></div><div class="line">				<span class="keyword">int</span> nowMax = <span class="number">0</span>;<span class="comment">// 當前最大(內容) 引索值。</span></div><div class="line">				<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; <span class="number">26</span>; j++)</div><div class="line">					<span class="keyword">if</span> (count[nowMax] &lt; count[j])</div><div class="line">						nowMax = j;</div><div class="line">				<span class="keyword">if</span> (count[nowMax] != <span class="number">0</span>) &#123;</div><div class="line">					<span class="keyword">char</span> a = (<span class="keyword">char</span>) (nowMax + <span class="string">'A'</span>);</div><div class="line">					System.out.println(a + <span class="string">" "</span> + count[nowMax]);</div><div class="line">					count[nowMax] = <span class="number">0</span>;<span class="comment">// 歸零。不歸零的話，答案永遠是他。</span></div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/LargestSquare/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/10/10/LargestSquare/" itemprop="url">1090 Largest Square 第三周作業二</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-10T15:15:33+08:00">
+                2017-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
+                    <span itemprop="name">Java作業</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Taki/2017/10/10/LargestSquare/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/10/10/LargestSquare/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Taki/2017/10/10/LargestSquare/" class="leancloud_visitors" data-flag-title="1090 Largest Square 第三周作業二">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight processing"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*Author : 蔡宗翰</span></div><div class="line"><span class="comment"> *Date : 2017/9/29</span></div><div class="line"><span class="comment"> * 第二題 ： Largest Square</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> class A410577003_3_2 &#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	 * 尋找方法：因為題目為正方形，且給正中心，因此只需要用for從左上方檢查到左下方是否相同，並檢查範圍值，即可。</span></div><div class="line"><span class="comment">	 */</span></div><div class="line">	<span class="built_in">boolean</span> checkMap(<span class="keyword">String</span>[] <span class="built_in">map</span>, <span class="built_in">int</span> r, <span class="built_in">int</span> c, <span class="built_in">int</span> l) &#123;</div><div class="line">		<span class="keyword">if</span> (<span class="built_in">map</span>.length &gt; r + l &amp;&amp; r - l &gt;= <span class="number">0</span> &amp;&amp; <span class="built_in">map</span>[<span class="number">0</span>].length() &gt; c + l &amp;&amp; c - l &gt;= <span class="number">0</span>) &#123;<span class="comment">// 範圍檢查</span></div><div class="line">			<span class="keyword">for</span> (<span class="built_in">int</span> j = r - l; j &lt;= r + l; j++)<span class="comment">// x軸</span></div><div class="line">				<span class="keyword">for</span> (<span class="built_in">int</span> k = c - l; k &lt;= c + l; k++)<span class="comment">// y軸</span></div><div class="line">					<span class="keyword">if</span> (<span class="built_in">map</span>[r].charAt(c) != <span class="built_in">map</span>[j].charAt(k))<span class="comment">// 只要不一樣就代表這個大小的方形不合乎規定。</span></div><div class="line">						<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">		&#125; <span class="keyword">else</span></div><div class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(<span class="keyword">String</span>[] args) &#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		A410577003_3_2 use = <span class="keyword">new</span> A410577003_3_2();<span class="comment">// checkMap();</span></div><div class="line">		<span class="comment">/*T 測資數量</span></div><div class="line"><span class="comment">		 *M x軸長度(直行為X，橫列為Y)</span></div><div class="line"><span class="comment">		 *N y軸長度</span></div><div class="line"><span class="comment">		 *Q 正方形中央資料數量</span></div><div class="line"><span class="comment">		 *r 中央x軸</span></div><div class="line"><span class="comment">		 *c 中央y軸</span></div><div class="line"><span class="comment">		 *皆為題目所設定之變數名稱照抄。</span></div><div class="line"><span class="comment">		 */</span>		</div><div class="line">		<span class="built_in">int</span> T = sc.nextInt();</div><div class="line">		<span class="keyword">for</span> (<span class="built_in">int</span> time = <span class="number">0</span>; time &lt; T; time++) &#123;</div><div class="line">			<span class="built_in">int</span> M = sc.nextInt(), N = sc.nextInt(), Q = sc.nextInt();</div><div class="line">			<span class="keyword">String</span>[] <span class="built_in">map</span> = <span class="keyword">new</span> <span class="keyword">String</span>[M];</div><div class="line">			<span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">0</span>; j &lt; M; j++)</div><div class="line">				<span class="built_in">map</span>[j] = sc.next();</div><div class="line">			</div><div class="line">			System.out.<span class="built_in">println</span>(M + <span class="string">" "</span> + N + <span class="string">" "</span> + Q);<span class="comment">// 輸出</span></div><div class="line">			<span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">0</span>; j &lt; Q; j++) &#123;</div><div class="line">				<span class="built_in">int</span> ans = <span class="number">1</span>, r = sc.nextInt(), c = sc.nextInt();<span class="comment">// ans 最小為1</span></div><div class="line">				<span class="keyword">for</span> (<span class="built_in">int</span> l = <span class="number">1</span>; use.checkMap(<span class="built_in">map</span>, r, c, l); l++)<span class="comment">// 利用for特性，簡化while</span></div><div class="line">					ans += <span class="number">2</span>;<span class="comment">// 因為給的是正中心，因此，正方形必定為奇數，因此+2。</span></div><div class="line">				System.out.<span class="built_in">println</span>(ans);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/Cola/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/10/10/Cola/" itemprop="url">11150 - Cola 第三周作業一</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-10T14:51:50+08:00">
+                2017-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
+                    <span itemprop="name">Java作業</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Taki/2017/10/10/Cola/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/10/10/Cola/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Taki/2017/10/10/Cola/" class="leancloud_visitors" data-flag-title="11150 - Cola 第三周作業一">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="原始版本"><a href="#原始版本" class="headerlink" title="原始版本"></a>原始版本</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*Author : 蔡宗翰</span></div><div class="line"><span class="comment"> *Date : 2017/9/29</span></div><div class="line"><span class="comment"> *第一題 : Cola</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_3_1</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	 * 方法：先將當前有的可樂，加入ans，以rest代表當前所剩瓶子，將空瓶(rest)換成cola，然後將多餘的空瓶，放到</span></div><div class="line"><span class="comment">	 * preRest中，再次進行下一次的迴圈，直到所有的cola都喝完。</span></div><div class="line"><span class="comment">	 */</span></div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">maxCola</span><span class="params">(<span class="keyword">int</span> cola, <span class="keyword">int</span> addRest)</span> </span>&#123;<span class="comment">// addRest 是否需要借一個瓶子 1 or 0</span></div><div class="line">		<span class="keyword">int</span> ans = <span class="number">0</span>, rest = <span class="number">0</span>, preRest = addRest;<span class="comment">// rest 代表當前所剩下的瓶子</span></div><div class="line">		<span class="keyword">while</span> (cola != <span class="number">0</span>) &#123;</div><div class="line">			ans += cola;</div><div class="line">			rest = cola + preRest;</div><div class="line">			cola = rest / <span class="number">3</span>;</div><div class="line">			preRest = rest % <span class="number">3</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> ans;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	 * 比大小，回傳最大值。</span></div><div class="line"><span class="comment">	 */</span></div><div class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getMax</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (a &gt; b)</div><div class="line">			<span class="keyword">return</span> a;</div><div class="line">		<span class="keyword">else</span></div><div class="line">			<span class="keyword">return</span> b;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">while</span> (sc.hasNextInt()) &#123;<span class="comment">// 連續輸入，直到輸入值不為int。</span></div><div class="line">			<span class="keyword">int</span> cola = sc.nextInt();</div><div class="line">			A410577003_3_1 use = <span class="keyword">new</span> A410577003_3_1();</div><div class="line">			<span class="comment">// 因為不知道到底需不需要借一個空瓶子，因此，使用getMax()，來比大小。</span></div><div class="line">			System.out.println(use.getMax(use.maxCola(cola, <span class="number">0</span>), use.maxCola(cola, <span class="number">1</span>)));</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="Fix-版本"><a href="#Fix-版本" class="headerlink" title="Fix 版本"></a>Fix 版本</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.Scanner;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_3_1fix</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);		</div><div class="line">		<span class="keyword">while</span> (sc.hasNextInt()) &#123;</div><div class="line">			<span class="keyword">int</span> cola = sc.nextInt(), ans = cola;</div><div class="line">			<span class="keyword">if</span> (cola % <span class="number">2</span> == <span class="number">0</span>)</div><div class="line">				cola += <span class="number">1</span>;</div><div class="line">			<span class="keyword">while</span> (cola &gt; <span class="number">1</span>) &#123;</div><div class="line">				ans += cola / <span class="number">3</span>;</div><div class="line">				cola = cola / <span class="number">3</span> + cola % <span class="number">3</span>;</div><div class="line">			&#125;</div><div class="line">			System.out.println(ans);</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/如何使用Hexo-Github-page架設專屬免費部落格-教學/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -516,7 +1170,7 @@
               
                 <a href="/Taki/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -538,7 +1192,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Taki/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>

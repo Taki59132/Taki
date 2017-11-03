@@ -298,6 +298,625 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/11/03/11389-The-Bus-Driver-Problem-第八周作業二/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/11/03/11389-The-Bus-Driver-Problem-第八周作業二/" itemprop="url">11389 The Bus Driver Problem 第八周作業二</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-11-03T22:24:48+08:00">
+                2017-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
+                    <span itemprop="name">Java作業</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Taki/2017/11/03/11389-The-Bus-Driver-Problem-第八周作業二/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/03/11389-The-Bus-Driver-Problem-第八周作業二/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Taki/2017/11/03/11389-The-Bus-Driver-Problem-第八周作業二/" class="leancloud_visitors" data-flag-title="11389 The Bus Driver Problem 第八周作業二">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*Author : 蔡宗翰</span></div><div class="line"><span class="comment"> *學號:410577003</span></div><div class="line"><span class="comment"> *Date : 2017/11/1</span></div><div class="line"><span class="comment"> *第八周作業二 11389	The Bus Driver Problem</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_8_2</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">int</span> <span class="title">abs</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;<span class="comment">// 取絕對值</span></div><div class="line">		<span class="keyword">if</span> (a &gt; b)</div><div class="line">			<span class="keyword">return</span> a - b;</div><div class="line">		<span class="keyword">else</span></div><div class="line">			<span class="keyword">return</span> b - a;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">input</span><span class="params">(ArrayList&lt;Integer&gt; list, <span class="keyword">int</span> n, Scanner cin)</span> </span>&#123;<span class="comment">// 進行輸入</span></div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</div><div class="line">			<span class="keyword">int</span> tmp = cin.nextInt();</div><div class="line">			list.add(tmp);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</div><div class="line">			<span class="keyword">int</span> n = sc.nextInt(), d = sc.nextInt(), r = sc.nextInt(), ans = <span class="number">0</span>;</div><div class="line">			<span class="keyword">if</span> (n == <span class="number">0</span> &amp;&amp; d == <span class="number">0</span> &amp;&amp; r == <span class="number">0</span>)<span class="comment">// 終結條件</span></div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			ArrayList&lt;Integer&gt; morning = <span class="keyword">new</span> ArrayList&lt;&gt;();<span class="comment">// 早班</span></div><div class="line">			ArrayList&lt;Integer&gt; night = <span class="keyword">new</span> ArrayList&lt;&gt;();<span class="comment">// 晚班</span></div><div class="line">			input(morning, n, sc);</div><div class="line">			input(night, n, sc);</div><div class="line">			Collections.sort(morning);<span class="comment">// 排序由小到大</span></div><div class="line">			Collections.sort(night);</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n; j++)</div><div class="line">				<span class="keyword">if</span> (morning.get(j) + night.get(n - <span class="number">1</span> - j) &gt; d) &#123;<span class="comment">// 最大值加上最小值為最佳解</span></div><div class="line">					ans += abs(morning.get(j) + night.get(n - <span class="number">1</span> - j), d) * r;<span class="comment">// 如果超出就將超出部分乘上倍率</span></div><div class="line">				&#125;</div><div class="line">			System.out.println(ans);</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/11/03/11192-Group-Reverse第八周作業一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/11/03/11192-Group-Reverse第八周作業一/" itemprop="url">11192 Group Reverse第八周作業一</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-11-03T22:23:37+08:00">
+                2017-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
+                    <span itemprop="name">Java作業</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Taki/2017/11/03/11192-Group-Reverse第八周作業一/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/03/11192-Group-Reverse第八周作業一/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Taki/2017/11/03/11192-Group-Reverse第八周作業一/" class="leancloud_visitors" data-flag-title="11192 Group Reverse第八周作業一">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*Author : 蔡宗翰</span></div><div class="line"><span class="comment"> *學號:410577003</span></div><div class="line"><span class="comment"> *Date : 2017/11/1</span></div><div class="line"><span class="comment"> *第八周作業一 11192 - Group Reverse</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_8_1</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">int</span> g;</div><div class="line">		<span class="keyword">while</span> ((g = sc.nextInt()) != <span class="number">0</span>) &#123;<span class="comment">//若為0則停止</span></div><div class="line">			String line = sc.next();</div><div class="line">			<span class="keyword">int</span> index = line.length() / g - <span class="number">1</span>;<span class="comment">//index用途為將line反向放置於reverse</span></div><div class="line">			<span class="keyword">char</span>[] reverse = <span class="keyword">new</span> <span class="keyword">char</span>[line.length() / g];</div><div class="line">			<span class="keyword">for</span> (<span class="keyword">char</span> c : line.toCharArray()) &#123;</div><div class="line">				reverse[index] = c;<span class="comment">//放到reverse</span></div><div class="line">				<span class="keyword">if</span> (index-- == <span class="number">0</span>) &#123;</div><div class="line">					System.out.print(reverse);</div><div class="line">					index = line.length() / g - <span class="number">1</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			System.out.println();</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/11/03/OSU/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/11/03/OSU/" itemprop="url">OSU</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-11-03T22:20:53+08:00">
+                2017-11-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Taki/2017/11/03/OSU/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/03/OSU/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Taki/2017/11/03/OSU/" class="leancloud_visitors" data-flag-title="OSU">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>好久沒完QAQ 排名173814<br><img src="https://i.imgur.com/E8jtl4T.jpg"></p>
+<h2 id="譜面"><a href="#譜面" class="headerlink" title="譜面"></a>譜面</h2><p>不定時更新譜面<br><a href="https://drive.google.com/drive/folders/0B4Uh6_dwqtZ5TzlLdXI5dDZ1eEU?usp=sharing" target="_blank" rel="external">https://drive.google.com/drive/folders/0B4Uh6_dwqtZ5TzlLdXI5dDZ1eEU?usp=sharing</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/24/Java-D2017-10-24/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Taki">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/Taki/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Taki Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/Taki/2017/10/24/Java-D2017-10-24/" itemprop="url">Java D2017_10_24</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-24T11:33:08+08:00">
+                2017-10-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Taki/2017/10/24/Java-D2017-10-24/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/10/24/Java-D2017-10-24/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/Taki/2017/10/24/Java-D2017-10-24/" class="leancloud_visitors" data-flag-title="Java D2017_10_24">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="System-gc"><a href="#System-gc" class="headerlink" title="System.gc()"></a>System.gc()</h2><p><em><strong>建議</strong></em> 系統回收不使用的記憶體  </p>
+<blockquote>
+<p>物件終結者</p>
+</blockquote>
+<ol>
+<li>非命令。</li>
+<li>非立即回收。</li>
+</ol>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>需看系統當前忙碌程度來決定是否處理垃圾。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/18/10242-Fourth-Point/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -413,7 +1032,60 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">/*Author : 蔡宗翰</div><div class="line"> *學號：410577003</div><div class="line"> *Date : 2017/10/18</div><div class="line"> *第六周作業二  10242:Fourth Point !!</div><div class="line"> */</div><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class A410577003_6_2 &#123;</div><div class="line">	/*</div><div class="line">	 * 解法：輸入為兩個邊，故將前兩個x,y作為底邊，再看相同的座標是右邊還是左邊的來決定第四個座標的位置。</div><div class="line">	 */</div><div class="line">	public static void getForthPoint(double[] tmp, double[][] coori, int preIndex, int aftIndex) &#123;</div><div class="line">		double ansX = tmp[0] + (coori[preIndex][0] - coori[aftIndex][0]);</div><div class="line">		double ansY = tmp[1] + (coori[preIndex][1] - coori[aftIndex][1]);</div><div class="line">		System.out.printf(&quot;%.3f %.3f&quot;, ansX, ansY);</div><div class="line">		System.out.println();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		while (sc.hasNextDouble()) &#123;</div><div class="line">			double[][] coori = new double[3][2];</div><div class="line">			for (int j = 0; j &lt; 2; j++) &#123;// 輸入兩個座標當作底邊</div><div class="line">				coori[j][0] = sc.nextDouble();</div><div class="line">				coori[j][1] = sc.nextDouble();</div><div class="line">			&#125;</div><div class="line">			double[] tmp = new double[2];// 因為不知道這個是不是與前兩個座標一樣，故為tmp</div><div class="line">			tmp[0] = sc.nextDouble();</div><div class="line">			tmp[1] = sc.nextDouble();</div><div class="line">			if (tmp[0] == coori[0][0] &amp;&amp; tmp[1] == coori[0][1]) &#123;// tmp跟左邊的座標相同</div><div class="line">				tmp[0] = sc.nextDouble();// 將tmp置換成第三個座標</div><div class="line">				tmp[1] = sc.nextDouble();</div><div class="line">				getForthPoint(tmp, coori, 1, 0);</div><div class="line">			&#125; else if (tmp[0] == coori[1][0] &amp;&amp; tmp[1] == coori[1][1]) &#123;// tmp跟右邊的座標相同</div><div class="line">				tmp[0] = sc.nextDouble();// 將tmp置換成第三個座標</div><div class="line">				tmp[1] = sc.nextDouble();</div><div class="line">				getForthPoint(tmp, coori, 0, 1);</div><div class="line"></div><div class="line">			&#125; else &#123;// tmp 並不跟前兩個座標相同，一樣還是要判斷是左邊的還是右邊的，才知道方向。</div><div class="line">				double sameX = sc.nextDouble();</div><div class="line">				double sameY = sc.nextDouble();</div><div class="line">				if (sameX == coori[0][0] &amp;&amp; sameY == coori[0][1]) &#123;// same</div><div class="line">																	// 跟左邊座標相同</div><div class="line">					getForthPoint(tmp, coori, 1, 0);</div><div class="line">				&#125; else if (sameX == coori[1][0] &amp;&amp; sameY == coori[1][1]) &#123;// same跟右邊座標相同</div><div class="line">					getForthPoint(tmp, coori, 0, 1);</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <pre><code class="java"><span class="comment">/*Author : 蔡宗翰</span>
+<span class="comment"> *學號：410577003</span>
+<span class="comment"> *Date : 2017/10/18</span>
+<span class="comment"> *第六周作業二  10242:Fourth Point !!</span>
+<span class="comment"> */</span>
+<span class="keyword">import</span> java.util.*;
+
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_6_2</span> </span>{
+    <span class="comment">/*</span>
+<span class="comment">     * 解法：輸入為兩個邊，故將前兩個x,y作為底邊，再看相同的座標是右邊還是左邊的來決定第四個座標的位置。</span>
+<span class="comment">     */</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">getForthPoint</span><span class="params">(<span class="keyword">double</span>[] tmp, <span class="keyword">double</span>[][] coori, <span class="keyword">int</span> preIndex, <span class="keyword">int</span> aftIndex)</span> </span>{
+        <span class="keyword">double</span> ansX = tmp[<span class="number">0</span>] + (coori[preIndex][<span class="number">0</span>] - coori[aftIndex][<span class="number">0</span>]);
+        <span class="keyword">double</span> ansY = tmp[<span class="number">1</span>] + (coori[preIndex][<span class="number">1</span>] - coori[aftIndex][<span class="number">1</span>]);
+        System.out.printf(<span class="string">"%.3f %.3f"</span>, ansX, ansY);
+        System.out.println();
+    }
+
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
+        Scanner sc = <span class="keyword">new</span> Scanner(System.in);
+        <span class="keyword">while</span> (sc.hasNextDouble()) {
+            <span class="keyword">double</span>[][] coori = <span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">3</span>][<span class="number">2</span>];
+            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">2</span>; j++) {<span class="comment">// 輸入兩個座標當作底邊</span>
+                coori[j][<span class="number">0</span>] = sc.nextDouble();
+                coori[j][<span class="number">1</span>] = sc.nextDouble();
+            }
+            <span class="keyword">double</span>[] tmp = <span class="keyword">new</span> <span class="keyword">double</span>[<span class="number">2</span>];<span class="comment">// 因為不知道這個是不是與前兩個座標一樣，故為tmp</span>
+            tmp[<span class="number">0</span>] = sc.nextDouble();
+            tmp[<span class="number">1</span>] = sc.nextDouble();
+            <span class="keyword">if</span> (tmp[<span class="number">0</span>] == coori[<span class="number">0</span>][<span class="number">0</span>] &amp;&amp; tmp[<span class="number">1</span>] == coori[<span class="number">0</span>][<span class="number">1</span>]) {<span class="comment">// tmp跟左邊的座標相同</span>
+                tmp[<span class="number">0</span>] = sc.nextDouble();<span class="comment">// 將tmp置換成第三個座標</span>
+                tmp[<span class="number">1</span>] = sc.nextDouble();
+                getForthPoint(tmp, coori, <span class="number">1</span>, <span class="number">0</span>);
+            } <span class="keyword">else</span> <span class="keyword">if</span> (tmp[<span class="number">0</span>] == coori[<span class="number">1</span>][<span class="number">0</span>] &amp;&amp; tmp[<span class="number">1</span>] == coori[<span class="number">1</span>][<span class="number">1</span>]) {<span class="comment">// tmp跟右邊的座標相同</span>
+                tmp[<span class="number">0</span>] = sc.nextDouble();<span class="comment">// 將tmp置換成第三個座標</span>
+                tmp[<span class="number">1</span>] = sc.nextDouble();
+                getForthPoint(tmp, coori, <span class="number">0</span>, <span class="number">1</span>);
+
+            } <span class="keyword">else</span> {<span class="comment">// tmp 並不跟前兩個座標相同，一樣還是要判斷是左邊的還是右邊的，才知道方向。</span>
+                <span class="keyword">double</span> sameX = sc.nextDouble();
+                <span class="keyword">double</span> sameY = sc.nextDouble();
+                <span class="keyword">if</span> (sameX == coori[<span class="number">0</span>][<span class="number">0</span>] &amp;&amp; sameY == coori[<span class="number">0</span>][<span class="number">1</span>]) {<span class="comment">// same</span>
+                                                                    <span class="comment">// 跟左邊座標相同</span>
+                    getForthPoint(tmp, coori, <span class="number">1</span>, <span class="number">0</span>);
+                } <span class="keyword">else</span> <span class="keyword">if</span> (sameX == coori[<span class="number">1</span>][<span class="number">0</span>] &amp;&amp; sameY == coori[<span class="number">1</span>][<span class="number">1</span>]) {<span class="comment">// same跟右邊座標相同</span>
+                    getForthPoint(tmp, coori, <span class="number">0</span>, <span class="number">1</span>);
+                }
+            }
+        }
+        sc.close();
+    }
+}
+</code></pre>
+
           
         
       
@@ -576,7 +1248,7 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">/*Author : 蔡宗翰</div><div class="line"> *學號:410577003</div><div class="line"> *Date : 2017/10/18</div><div class="line"> *第六周作業一 10922 : 2 the 9s</div><div class="line"> */</div><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class A410577003_6_1 &#123;</div><div class="line">	/*</div><div class="line">	 * 解法：每個字元相加，判斷總數是否&lt;10，是-&gt;判斷是否為9，若為9則印出答案，若不是9則印出非9倍數。 如果大於10， 則繼續加總。</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		String numbers;</div><div class="line">		while (!(numbers = sc.next()).equals(&quot;0&quot;)) &#123;// 0為中斷條件</div><div class="line">			System.out.print(numbers + &apos; &apos;);</div><div class="line">			int ans = 0;</div><div class="line">			while (true) &#123;</div><div class="line">				ans++;</div><div class="line">				int sum = 0;</div><div class="line">				for (char nowNumber : numbers.toCharArray())// 將numbers</div><div class="line">															// 一個一個放到char中進行加總</div><div class="line">					sum += nowNumber - &apos;0&apos;;</div><div class="line">				if (sum &lt; 10) &#123;// 代表只剩下一個數字</div><div class="line">					if (sum == 9)// 代表為9的倍數</div><div class="line">						System.out.println(&quot;is a multiple of 9 and has 9-degree &quot; + ans + &apos;.&apos;);</div><div class="line">					else// 代表非9的倍數</div><div class="line">						System.out.println(&quot;is not a multiple of 9.&quot;);</div><div class="line">					break;</div><div class="line">				&#125;</div><div class="line">				numbers = Integer.toString(sum);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*Author : 蔡宗翰</span></div><div class="line"><span class="comment"> *學號:410577003</span></div><div class="line"><span class="comment"> *Date : 2017/10/18</span></div><div class="line"><span class="comment"> *第六周作業一 10922 : 2 the 9s</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_6_1</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	 * 解法：每個字元相加，判斷總數是否&lt;10，是-&gt;判斷是否為9，若為9則印出答案，若不是9則印出非9倍數。 如果大於10， 則繼續加總。</span></div><div class="line"><span class="comment">	 */</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		String numbers;</div><div class="line">		<span class="keyword">while</span> (!(numbers = sc.next()).equals(<span class="string">"0"</span>)) &#123;<span class="comment">// 0為中斷條件</span></div><div class="line">			System.out.print(numbers + <span class="string">' '</span>);</div><div class="line">			<span class="keyword">int</span> ans = <span class="number">0</span>;</div><div class="line">			<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</div><div class="line">				ans++;</div><div class="line">				<span class="keyword">int</span> sum = <span class="number">0</span>;</div><div class="line">				<span class="keyword">for</span> (<span class="keyword">char</span> nowNumber : numbers.toCharArray())<span class="comment">// 將numbers</span></div><div class="line">															<span class="comment">// 一個一個放到char中進行加總</span></div><div class="line">					sum += nowNumber - <span class="string">'0'</span>;</div><div class="line">				<span class="keyword">if</span> (sum &lt; <span class="number">10</span>) &#123;<span class="comment">// 代表只剩下一個數字</span></div><div class="line">					<span class="keyword">if</span> (sum == <span class="number">9</span>)<span class="comment">// 代表為9的倍數</span></div><div class="line">						System.out.println(<span class="string">"is a multiple of 9 and has 9-degree "</span> + ans + <span class="string">'.'</span>);</div><div class="line">					<span class="keyword">else</span><span class="comment">// 代表非9的倍數</span></div><div class="line">						System.out.println(<span class="string">"is not a multiple of 9."</span>);</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">				numbers = Integer.toString(sum);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
           
         
       
@@ -738,7 +1410,7 @@
 
       
         
-          <h2 id="List-ArrayList-可變長度的陣列"><a href="#List-ArrayList-可變長度的陣列" class="headerlink" title="List(ArrayList)可變長度的陣列"></a>List(ArrayList)可變長度的陣列</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class D2017_10_18 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		List&lt;String&gt; myList = new ArrayList&lt;String&gt;();// 使用ArrayList</div><div class="line">		myList.add(&quot;Hello&quot;);// 新增內容</div><div class="line">		myList.add(&quot;World&quot;);</div><div class="line">		myList.add(&quot;myList&quot;);</div><div class="line">		myList.add(1, &quot;test&quot;);</div><div class="line">		myList.add(new String(&quot;wrapped&quot;)); // 手動包裝</div><div class="line">		myList.set(0, &quot;Replacement&quot;);// 修改內容值</div><div class="line">		String tmp = myList.get(3);// 提取內容物</div><div class="line"></div><div class="line">		System.out.println(myList);</div><div class="line">		System.out.println(tmp);</div><div class="line">		System.out.println(myList.indexOf(&quot;World&quot;));// 尋找值的引索，不存在回傳-1</div><div class="line">		System.out.println(myList.isEmpty());// 檢查是否為空</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          <h2 id="List-ArrayList-可變長度的陣列"><a href="#List-ArrayList-可變長度的陣列" class="headerlink" title="List(ArrayList)可變長度的陣列"></a>List(ArrayList)可變長度的陣列</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">D2017_10_18</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		List&lt;String&gt; myList = <span class="keyword">new</span> ArrayList&lt;String&gt;();<span class="comment">// 使用ArrayList</span></div><div class="line">		myList.add(<span class="string">"Hello"</span>);<span class="comment">// 新增內容</span></div><div class="line">		myList.add(<span class="string">"World"</span>);</div><div class="line">		myList.add(<span class="string">"myList"</span>);</div><div class="line">		myList.add(<span class="number">1</span>, <span class="string">"test"</span>);</div><div class="line">		myList.add(<span class="keyword">new</span> String(<span class="string">"wrapped"</span>)); <span class="comment">// 手動包裝</span></div><div class="line">		myList.set(<span class="number">0</span>, <span class="string">"Replacement"</span>);<span class="comment">// 修改內容值</span></div><div class="line">		String tmp = myList.get(<span class="number">3</span>);<span class="comment">// 提取內容物</span></div><div class="line"></div><div class="line">		System.out.println(myList);</div><div class="line">		System.out.println(tmp);</div><div class="line">		System.out.println(myList.indexOf(<span class="string">"World"</span>));<span class="comment">// 尋找值的引索，不存在回傳-1</span></div><div class="line">		System.out.println(myList.isEmpty());<span class="comment">// 檢查是否為空</span></div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/Taki/2017/10/18/List/#more" rel="contents">
@@ -1078,7 +1750,7 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">/*Author : 蔡宗翰</div><div class="line"> *學號 410577003</div><div class="line"> *Date : 2017/10/13</div><div class="line"> *第五周作業二  10170: The Hotel with Infinite Rooms</div><div class="line"> */</div><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class A410577003_5_2 &#123;</div><div class="line">	/*</div><div class="line">	 * 解法：人數代表天數，只要第一次人數大於天數的旅行團人數即為答案。</div><div class="line">	 * 由於Uva所述D有10^15，因此開long存取，不然會RunTimeError。</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		while(sc.hasNextLong()) &#123;</div><div class="line">			long S = sc.nextLong(), D = sc.nextLong(), ans = S, tmp = S;		</div><div class="line">			while(tmp &lt; D) &#123;</div><div class="line">				ans++;</div><div class="line">				tmp = tmp+ans;</div><div class="line">			&#125;</div><div class="line">			System.out.println(ans);</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*Author : 蔡宗翰</span></div><div class="line"><span class="comment"> *學號 410577003</span></div><div class="line"><span class="comment"> *Date : 2017/10/13</span></div><div class="line"><span class="comment"> *第五周作業二  10170: The Hotel with Infinite Rooms</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_5_2</span> </span>&#123;</div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	 * 解法：人數代表天數，只要第一次人數大於天數的旅行團人數即為答案。</span></div><div class="line"><span class="comment">	 * 由於Uva所述D有10^15，因此開long存取，不然會RunTimeError。</span></div><div class="line"><span class="comment">	 */</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">while</span>(sc.hasNextLong()) &#123;</div><div class="line">			<span class="keyword">long</span> S = sc.nextLong(), D = sc.nextLong(), ans = S, tmp = S;		</div><div class="line">			<span class="keyword">while</span>(tmp &lt; D) &#123;</div><div class="line">				ans++;</div><div class="line">				tmp = tmp+ans;</div><div class="line">			&#125;</div><div class="line">			System.out.println(ans);</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           
         
       
@@ -1241,661 +1913,7 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/*Author : 蔡宗翰</div><div class="line"> *學號 410577003</div><div class="line"> *Date : 2017/10/13</div><div class="line"> *第五周作業一  118: Mutant Flatworld Expolrers</div><div class="line"> */</div><div class="line">import java.util.*;</div><div class="line"></div><div class="line">public class A410577003_5_1 &#123;</div><div class="line">	static int falledNumber = 0;// 已經掉下去的機器人數量</div><div class="line">	static int[][] falled = new int[200][2];// 座標最大值50,50 因此最多200個須標記位置，於此位置上會掉下</div><div class="line">											// 去的指令將被省略</div><div class="line">	/*</div><div class="line">	 * 確認這個點是否有機器人掉下去過。 有-&gt;true ; 沒有-&gt; false</div><div class="line">	 */</div><div class="line">	static boolean ifFalled(int posX, int posY) &#123;</div><div class="line">		if (falledNumber == 0)</div><div class="line">			return false;</div><div class="line">		for (int j = 0; j &lt; falledNumber; j++)</div><div class="line">			if (falled[j][0] == posX &amp;&amp; falled[j][1] == posY)</div><div class="line">				return true;</div><div class="line">		return false;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	/*</div><div class="line">	 * 解法：將N,E,S,W換成0,1,2,3，向L就將現在方向-1，向R就將現在方向+1，向F就依照方向增加or減少x,y軸。</div><div class="line">	 * 直接模擬，並於邊界處，檢查是否有機器人曾經於此落下過，如果有，則忽略讓目前機器人落下的指令，如果無 就直接LOST。</div><div class="line">	 */</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		int maxX = sc.nextInt(), maxY = sc.nextInt();</div><div class="line">		while (true) &#123;</div><div class="line">			// 下面是用來過UVA的 ，如需使用請去掉註解，並將33,37,38註解掉。</div><div class="line">// 		while (sc.hasNext()) &#123;</div><div class="line">			int posX = sc.nextInt(), posY = sc.nextInt();//當前位置x, y</div><div class="line">			if (posX == 0 &amp;&amp; posY == 0)</div><div class="line">				break;</div><div class="line">			char[] oris = &#123; &apos;N&apos;, &apos;E&apos;, &apos;S&apos;, &apos;W&apos; &#125;;//方向陣列</div><div class="line">			char ori = sc.next().charAt(0);</div><div class="line">			int nowOri = 0;//現在目前所面相方向</div><div class="line">			for (int j = 0; j &lt; 4; j++)</div><div class="line">				if (oris[j] == ori)//將輸入初始方向轉為數字0,1,2,3</div><div class="line">					nowOri = j;</div><div class="line">			String orders = sc.next();//指令集</div><div class="line">			boolean check = true;//check 為True代表機器人並不會落下；為False代表機器人會落下</div><div class="line">			for (char order : orders.toCharArray()) &#123;//將指令集拆成單個指令</div><div class="line">				if (order == &apos;L&apos;) &#123;</div><div class="line">					if (nowOri == 0)//循環0,1,2,3</div><div class="line">						nowOri = 3;</div><div class="line">					else</div><div class="line">						nowOri = (nowOri - 1) % 4;</div><div class="line">				&#125; else if (order == &apos;R&apos;)</div><div class="line">					nowOri = (nowOri + 1) % 4;</div><div class="line">				else if (order == &apos;F&apos;) &#123;</div><div class="line">					if (nowOri == 0 &amp;&amp; posY + 1 &lt;= maxY)</div><div class="line">						posY++;</div><div class="line">					else if (nowOri == 1 &amp;&amp; posX + 1 &lt;= maxX)</div><div class="line">						posX++;</div><div class="line">					else if (nowOri == 2 &amp;&amp; posY - 1 &gt;= 0)</div><div class="line">						posY--;</div><div class="line">					else if (nowOri == 3 &amp;&amp; posX - 1 &gt;= 0)</div><div class="line">						posX--;</div><div class="line">					else if (!ifFalled(posX, posY)) &#123;//確認曾經是否有機器人落下過。</div><div class="line">						check = false;</div><div class="line">						break;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			if (check)//沒落下過，輸出當前位置及方向</div><div class="line">				System.out.println(posX + &quot; &quot; + posY + &quot; &quot; + oris[nowOri]);</div><div class="line">			else &#123;//落下過，紀錄後輸出位置及方向</div><div class="line">				falled[falledNumber][0] = posX;</div><div class="line">				falled[falledNumber++][1] = posY;</div><div class="line">				System.out.println(posX + &quot; &quot; + posY + &quot; &quot; + oris[nowOri] + &quot; &quot; + &quot;LOST&quot;);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/RotatingSentences/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Taki">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/Taki/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taki Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Taki/2017/10/10/RotatingSentences/" itemprop="url">490 Rotating Sentences第四周作業二</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-10T15:21:26+08:00">
-                2017-10-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
-                    <span itemprop="name">Java作業</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Taki/2017/10/10/RotatingSentences/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/10/RotatingSentences/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Taki/2017/10/10/RotatingSentences/" class="leancloud_visitors" data-flag-title="490 Rotating Sentences第四周作業二">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/*Author : 蔡宗翰</div><div class="line"> *Date : 2017/10/7</div><div class="line"> *第四周第二題：490 - Rotating Sentences</div><div class="line"> */</div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">/*</div><div class="line"> * 解法：題目限制句數為100，因此可以不使用vector，直接開100個備用。</div><div class="line"> * 將所有的句子輸入後，反轉90度，最簡單的方式就是，直接用印的，長度不夠的地方補&quot; &quot;，即可防止</div><div class="line"> * compiler噴outofstringindex。</div><div class="line"> */</div><div class="line">public class A410577003_4_2 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		String[] sentence = new String[100];//</div><div class="line">		int maxLine = 0, maxLength = 0;// maxLine 用於紀錄有幾行；maxLength用於紀錄最長的句子長度。</div><div class="line">		/*</div><div class="line">		 * 解釋一下下面24-28，下面的作用跟29-34一樣，但Online judge不吃QAQ，所以改成29-34，</div><div class="line">		 * 但是，出現了一個問題，那就是使用29-34的，用eclipse停不下來，所以如果要人工測試，</div><div class="line">		 * 請善用ctrl+shift+c將註解拿掉，然後將29-33用一樣的方式註解掉。</div><div class="line">		 */</div><div class="line">		 while (!(sentence[maxLine] = sc.nextLine()).equals(&quot;&quot;)) &#123;</div><div class="line">		 	if (maxLength &lt; sentence[maxLine].length())</div><div class="line">		 	maxLength = sentence[maxLine].length();</div><div class="line">		 	maxLine++;</div><div class="line">		 &#125;</div><div class="line">//		while (sc.hasNextLine()) &#123;</div><div class="line">//			sentence[maxLine] = sc.nextLine();</div><div class="line">//			if (maxLength &lt; sentence[maxLine].length())</div><div class="line">//				maxLength = sentence[maxLine].length();</div><div class="line">//			maxLine++;</div><div class="line">//		&#125;</div><div class="line">		sc.close();</div><div class="line"></div><div class="line">		for (int j = 0; j &lt; maxLength; j++) &#123;// j &amp; k 對調就是正常的輸出方向。</div><div class="line">			for (int k = maxLine - 1; k &gt;= 0; k--) &#123;</div><div class="line">				if (j &lt; sentence[k].length())</div><div class="line">					System.out.print(sentence[k].charAt(j));</div><div class="line">				else</div><div class="line">					System.out.print(&apos; &apos;);// 不夠的地方補&apos; &apos;以免噴錯誤訊息。</div><div class="line">			&#125;</div><div class="line">			System.out.println();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/WhatsCryptanalysis/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Taki">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/Taki/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taki Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Taki/2017/10/10/WhatsCryptanalysis/" itemprop="url">10008 What's Cryptanalysis?第四周作業一</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-10T15:19:11+08:00">
-                2017-10-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
-                    <span itemprop="name">Java作業</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Taki/2017/10/10/WhatsCryptanalysis/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/10/WhatsCryptanalysis/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Taki/2017/10/10/WhatsCryptanalysis/" class="leancloud_visitors" data-flag-title="10008 What's Cryptanalysis?第四周作業一">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">/*Author : 蔡宗翰</div><div class="line"> *Date : 2017/10/4</div><div class="line"> *第四周第一題 What&apos;s Cryptanalysis?</div><div class="line"> */</div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">/*解法： 讀入每一行，變成一個又一個的字元，判斷是否介於A~Z，利用char資料型態為short作為引索值，存於count中，</div><div class="line"> *在使用不換位的泡沫排序列印出來即可。</div><div class="line"> */</div><div class="line">public class A410577003_4_1 &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		while (sc.hasNextInt()) &#123;// 讓UVA能夠連續讀入資料</div><div class="line">			int n = sc.nextInt();</div><div class="line">			int[] count = new int[26];// 英文字母26個</div><div class="line">			sc.nextLine();// nextint後要使用nextline，需要先吃掉後面的換行</div><div class="line">			for (int j = 0; j &lt; n; j++) &#123;</div><div class="line">				String text = sc.nextLine().toUpperCase();// 全部換成大寫</div><div class="line">				for (char a : text.toCharArray())</div><div class="line">					if (a &gt;= &apos;A&apos; &amp;&amp; a &lt;= &apos;Z&apos;)// 字母判斷</div><div class="line">						count[a - &apos;A&apos;]++;</div><div class="line">			&#125;</div><div class="line">			for (int k = 0; k &lt; 26; k++) &#123;// 不換位的泡沫排序法</div><div class="line">				int nowMax = 0;// 當前最大(內容) 引索值。</div><div class="line">				for (int j = 1; j &lt; 26; j++)</div><div class="line">					if (count[nowMax] &lt; count[j])</div><div class="line">						nowMax = j;</div><div class="line">				if (count[nowMax] != 0) &#123;</div><div class="line">					char a = (char) (nowMax + &apos;A&apos;);</div><div class="line">					System.out.println(a + &quot; &quot; + count[nowMax]);</div><div class="line">					count[nowMax] = 0;// 歸零。不歸零的話，答案永遠是他。</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/LargestSquare/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Taki">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/Taki/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taki Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Taki/2017/10/10/LargestSquare/" itemprop="url">1090 Largest Square 第三周作業二</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-10T15:15:33+08:00">
-                2017-10-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
-                    <span itemprop="name">Java作業</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Taki/2017/10/10/LargestSquare/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/10/LargestSquare/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Taki/2017/10/10/LargestSquare/" class="leancloud_visitors" data-flag-title="1090 Largest Square 第三周作業二">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">/*Author : 蔡宗翰</div><div class="line"> *Date : 2017/9/29</div><div class="line"> * 第二題 ： Largest Square</div><div class="line"> */</div><div class="line"></div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class A410577003_3_2 &#123;</div><div class="line">	/*</div><div class="line">	 * 尋找方法：因為題目為正方形，且給正中心，因此只需要用for從左上方檢查到左下方是否相同，並檢查範圍值，即可。</div><div class="line">	 */</div><div class="line">	boolean checkMap(String[] map, int r, int c, int l) &#123;</div><div class="line">		if (map.length &gt; r + l &amp;&amp; r - l &gt;= 0 &amp;&amp; map[0].length() &gt; c + l &amp;&amp; c - l &gt;= 0) &#123;// 範圍檢查</div><div class="line">			for (int j = r - l; j &lt;= r + l; j++)// x軸</div><div class="line">				for (int k = c - l; k &lt;= c + l; k++)// y軸</div><div class="line">					if (map[r].charAt(c) != map[j].charAt(k))// 只要不一樣就代表這個大小的方形不合乎規定。</div><div class="line">						return false;</div><div class="line">			return true;</div><div class="line">		&#125; else</div><div class="line">			return false;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		A410577003_3_2 use = new A410577003_3_2();// checkMap();</div><div class="line">		/*T 測資數量</div><div class="line">		 *M x軸長度(直行為X，橫列為Y)</div><div class="line">		 *N y軸長度</div><div class="line">		 *Q 正方形中央資料數量</div><div class="line">		 *r 中央x軸</div><div class="line">		 *c 中央y軸</div><div class="line">		 *皆為題目所設定之變數名稱照抄。</div><div class="line">		 */		</div><div class="line">		int T = sc.nextInt();</div><div class="line">		for (int time = 0; time &lt; T; time++) &#123;</div><div class="line">			int M = sc.nextInt(), N = sc.nextInt(), Q = sc.nextInt();</div><div class="line">			String[] map = new String[M];</div><div class="line">			for (int j = 0; j &lt; M; j++)</div><div class="line">				map[j] = sc.next();</div><div class="line">			</div><div class="line">			System.out.println(M + &quot; &quot; + N + &quot; &quot; + Q);// 輸出</div><div class="line">			for (int j = 0; j &lt; Q; j++) &#123;</div><div class="line">				int ans = 1, r = sc.nextInt(), c = sc.nextInt();// ans 最小為1</div><div class="line">				for (int l = 1; use.checkMap(map, r, c, l); l++)// 利用for特性，簡化while</div><div class="line">					ans += 2;// 因為給的是正中心，因此，正方形必定為奇數，因此+2。</div><div class="line">				System.out.println(ans);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Taki59132.github.io/Taki/Taki/2017/10/10/Cola/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Taki">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/Taki/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Taki Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Taki/2017/10/10/Cola/" itemprop="url">11150 - Cola 第三周作業一</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2017-10-10T14:51:50+08:00">
-                2017-10-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/Taki/categories/Java作業/" itemprop="url" rel="index">
-                    <span itemprop="name">Java作業</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Taki/2017/10/10/Cola/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/10/10/Cola/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/Taki/2017/10/10/Cola/" class="leancloud_visitors" data-flag-title="11150 - Cola 第三周作業一">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">閱讀次數&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="原始版本"><a href="#原始版本" class="headerlink" title="原始版本"></a>原始版本</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">/*Author : 蔡宗翰</div><div class="line"> *Date : 2017/9/29</div><div class="line"> *第一題 : Cola</div><div class="line"> */</div><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class A410577003_3_1 &#123;</div><div class="line">	/*</div><div class="line">	 * 方法：先將當前有的可樂，加入ans，以rest代表當前所剩瓶子，將空瓶(rest)換成cola，然後將多餘的空瓶，放到</div><div class="line">	 * preRest中，再次進行下一次的迴圈，直到所有的cola都喝完。</div><div class="line">	 */</div><div class="line">	int maxCola(int cola, int addRest) &#123;// addRest 是否需要借一個瓶子 1 or 0</div><div class="line">		int ans = 0, rest = 0, preRest = addRest;// rest 代表當前所剩下的瓶子</div><div class="line">		while (cola != 0) &#123;</div><div class="line">			ans += cola;</div><div class="line">			rest = cola + preRest;</div><div class="line">			cola = rest / 3;</div><div class="line">			preRest = rest % 3;</div><div class="line">		&#125;</div><div class="line">		return ans;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/*</div><div class="line">	 * 比大小，回傳最大值。</div><div class="line">	 */</div><div class="line">	int getMax(int a, int b) &#123;</div><div class="line">		if (a &gt; b)</div><div class="line">			return a;</div><div class="line">		else</div><div class="line">			return b;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		while (sc.hasNextInt()) &#123;// 連續輸入，直到輸入值不為int。</div><div class="line">			int cola = sc.nextInt();</div><div class="line">			A410577003_3_1 use = new A410577003_3_1();</div><div class="line">			// 因為不知道到底需不需要借一個空瓶子，因此，使用getMax()，來比大小。</div><div class="line">			System.out.println(use.getMax(use.maxCola(cola, 0), use.maxCola(cola, 1)));</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="Fix-版本"><a href="#Fix-版本" class="headerlink" title="Fix 版本"></a>Fix 版本</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line"></div><div class="line">public class A410577003_3_1fix &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Scanner sc = new Scanner(System.in);		</div><div class="line">		while (sc.hasNextInt()) &#123;</div><div class="line">			int cola = sc.nextInt(), ans = cola;</div><div class="line">			if (cola % 2 == 0)</div><div class="line">				cola += 1;</div><div class="line">			while (cola &gt; 1) &#123;</div><div class="line">				ans += cola / 3;</div><div class="line">				cola = cola / 3 + cola % 3;</div><div class="line">			&#125;</div><div class="line">			System.out.println(ans);</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/*Author : 蔡宗翰</span></div><div class="line"><span class="comment"> *學號 410577003</span></div><div class="line"><span class="comment"> *Date : 2017/10/13</span></div><div class="line"><span class="comment"> *第五周作業一  118: Mutant Flatworld Expolrers</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">import</span> java.util.*;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">A410577003_5_1</span> </span>&#123;</div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span> falledNumber = <span class="number">0</span>;<span class="comment">// 已經掉下去的機器人數量</span></div><div class="line">	<span class="keyword">static</span> <span class="keyword">int</span>[][] falled = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">200</span>][<span class="number">2</span>];<span class="comment">// 座標最大值50,50 因此最多200個須標記位置，於此位置上會掉下</span></div><div class="line">											<span class="comment">// 去的指令將被省略</span></div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	 * 確認這個點是否有機器人掉下去過。 有-&gt;true ; 沒有-&gt; false</span></div><div class="line"><span class="comment">	 */</span></div><div class="line">	<span class="function"><span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">ifFalled</span><span class="params">(<span class="keyword">int</span> posX, <span class="keyword">int</span> posY)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (falledNumber == <span class="number">0</span>)</div><div class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; falledNumber; j++)</div><div class="line">			<span class="keyword">if</span> (falled[j][<span class="number">0</span>] == posX &amp;&amp; falled[j][<span class="number">1</span>] == posY)</div><div class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/*</span></div><div class="line"><span class="comment">	 * 解法：將N,E,S,W換成0,1,2,3，向L就將現在方向-1，向R就將現在方向+1，向F就依照方向增加or減少x,y軸。</span></div><div class="line"><span class="comment">	 * 直接模擬，並於邊界處，檢查是否有機器人曾經於此落下過，如果有，則忽略讓目前機器人落下的指令，如果無 就直接LOST。</span></div><div class="line"><span class="comment">	 */</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</div><div class="line">		<span class="keyword">int</span> maxX = sc.nextInt(), maxY = sc.nextInt();</div><div class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</div><div class="line">			<span class="comment">// 下面是用來過UVA的 ，如需使用請去掉註解，並將33,37,38註解掉。</span></div><div class="line"><span class="comment">// 		while (sc.hasNext()) &#123;</span></div><div class="line">			<span class="keyword">int</span> posX = sc.nextInt(), posY = sc.nextInt();<span class="comment">//當前位置x, y</span></div><div class="line">			<span class="keyword">if</span> (posX == <span class="number">0</span> &amp;&amp; posY == <span class="number">0</span>)</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			<span class="keyword">char</span>[] oris = &#123; <span class="string">'N'</span>, <span class="string">'E'</span>, <span class="string">'S'</span>, <span class="string">'W'</span> &#125;;<span class="comment">//方向陣列</span></div><div class="line">			<span class="keyword">char</span> ori = sc.next().charAt(<span class="number">0</span>);</div><div class="line">			<span class="keyword">int</span> nowOri = <span class="number">0</span>;<span class="comment">//現在目前所面相方向</span></div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; j++)</div><div class="line">				<span class="keyword">if</span> (oris[j] == ori)<span class="comment">//將輸入初始方向轉為數字0,1,2,3</span></div><div class="line">					nowOri = j;</div><div class="line">			String orders = sc.next();<span class="comment">//指令集</span></div><div class="line">			<span class="keyword">boolean</span> check = <span class="keyword">true</span>;<span class="comment">//check 為True代表機器人並不會落下；為False代表機器人會落下</span></div><div class="line">			<span class="keyword">for</span> (<span class="keyword">char</span> order : orders.toCharArray()) &#123;<span class="comment">//將指令集拆成單個指令</span></div><div class="line">				<span class="keyword">if</span> (order == <span class="string">'L'</span>) &#123;</div><div class="line">					<span class="keyword">if</span> (nowOri == <span class="number">0</span>)<span class="comment">//循環0,1,2,3</span></div><div class="line">						nowOri = <span class="number">3</span>;</div><div class="line">					<span class="keyword">else</span></div><div class="line">						nowOri = (nowOri - <span class="number">1</span>) % <span class="number">4</span>;</div><div class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span> (order == <span class="string">'R'</span>)</div><div class="line">					nowOri = (nowOri + <span class="number">1</span>) % <span class="number">4</span>;</div><div class="line">				<span class="keyword">else</span> <span class="keyword">if</span> (order == <span class="string">'F'</span>) &#123;</div><div class="line">					<span class="keyword">if</span> (nowOri == <span class="number">0</span> &amp;&amp; posY + <span class="number">1</span> &lt;= maxY)</div><div class="line">						posY++;</div><div class="line">					<span class="keyword">else</span> <span class="keyword">if</span> (nowOri == <span class="number">1</span> &amp;&amp; posX + <span class="number">1</span> &lt;= maxX)</div><div class="line">						posX++;</div><div class="line">					<span class="keyword">else</span> <span class="keyword">if</span> (nowOri == <span class="number">2</span> &amp;&amp; posY - <span class="number">1</span> &gt;= <span class="number">0</span>)</div><div class="line">						posY--;</div><div class="line">					<span class="keyword">else</span> <span class="keyword">if</span> (nowOri == <span class="number">3</span> &amp;&amp; posX - <span class="number">1</span> &gt;= <span class="number">0</span>)</div><div class="line">						posX--;</div><div class="line">					<span class="keyword">else</span> <span class="keyword">if</span> (!ifFalled(posX, posY)) &#123;<span class="comment">//確認曾經是否有機器人落下過。</span></div><div class="line">						check = <span class="keyword">false</span>;</div><div class="line">						<span class="keyword">break</span>;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span> (check)<span class="comment">//沒落下過，輸出當前位置及方向</span></div><div class="line">				System.out.println(posX + <span class="string">" "</span> + posY + <span class="string">" "</span> + oris[nowOri]);</div><div class="line">			<span class="keyword">else</span> &#123;<span class="comment">//落下過，紀錄後輸出位置及方向</span></div><div class="line">				falled[falledNumber][<span class="number">0</span>] = posX;</div><div class="line">				falled[falledNumber++][<span class="number">1</span>] = posY;</div><div class="line">				System.out.println(posX + <span class="string">" "</span> + posY + <span class="string">" "</span> + oris[nowOri] + <span class="string">" "</span> + <span class="string">"LOST"</span>);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
           
         
       
@@ -1984,7 +2002,7 @@
               
                 <a href="/Taki/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -2006,7 +2024,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/Taki/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">標籤</span>
                 </a>
               </div>
